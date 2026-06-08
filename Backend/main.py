@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from user_auth import startup_user_db
 from log import logger
-from routes import auth, user, documents, chats,summaries,chat
+from routes import auth, user, documents,summaries,chat
 import uvicorn
 
 @asynccontextmanager
@@ -33,7 +33,6 @@ app.include_router(auth.router)
 app.include_router(user.router)
 app.include_router(documents.router)
 app.include_router(summaries.router)
-app.include_router(chats.router)
 app.include_router(chat.router)
 
 @app.get("/")
@@ -41,4 +40,4 @@ async def root():
     return {"message": "Connected to backend successfully!"}
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="localhost", port=1000, reload=True)
+    uvicorn.run("main:app", host="localhost", port=8000, reload=True)

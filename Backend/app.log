@@ -6825,3 +6825,1094 @@ WHERE users.email = $1::VARCHAR]
 2026-06-02 23:49:09,026 - INFO - Startup
 2026-06-02 23:49:21,419 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJleHAiOjE3ODA1MTA2OTV9.nW48ALWatJvfDiLmhO_YhHepMneZuOfTLCXwR7fTvzM
 2026-06-02 23:49:21,420 - INFO - get_current_user user_email=user@example.com
+2026-06-03 15:02:32,722 - INFO - User database initialized
+2026-06-03 15:02:32,723 - INFO - Startup
+2026-06-03 15:02:33,639 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJleHAiOjE3ODA1NjU1NTN9.GvwqxlQxrDiSta_nC_iyGZaT92rk87sOc_wLXSlM6fA
+2026-06-03 15:02:33,640 - INFO - get_current_user user_email=user@example.com
+2026-06-03 15:02:33,657 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJleHAiOjE3ODA1NjU1NTN9.GvwqxlQxrDiSta_nC_iyGZaT92rk87sOc_wLXSlM6fA
+2026-06-03 15:02:33,657 - INFO - get_current_user user_email=user@example.com
+2026-06-03 15:02:33,668 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJleHAiOjE3ODA1NjU1NTN9.GvwqxlQxrDiSta_nC_iyGZaT92rk87sOc_wLXSlM6fA
+2026-06-03 15:02:33,668 - INFO - get_current_user user_email=user@example.com
+2026-06-03 15:02:33,685 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJleHAiOjE3ODA1NjU1NTN9.GvwqxlQxrDiSta_nC_iyGZaT92rk87sOc_wLXSlM6fA
+2026-06-03 15:02:33,686 - INFO - get_current_user user_email=user@example.com
+2026-06-03 15:03:43,102 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanUxMjNAZ21haWwuY29tIiwiZXhwIjoxNzgwNTY1NjIyfQ.5P9GvpElMgBoeJyZZe0BJU7iMFazkLrdB_fJbidWBXg
+2026-06-03 15:03:43,102 - INFO - get_current_user user_email=raju123@gmail.com
+2026-06-03 15:03:43,118 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanUxMjNAZ21haWwuY29tIiwiZXhwIjoxNzgwNTY1NjIyfQ.5P9GvpElMgBoeJyZZe0BJU7iMFazkLrdB_fJbidWBXg
+2026-06-03 15:03:43,118 - INFO - get_current_user user_email=raju123@gmail.com
+2026-06-03 15:03:43,142 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanUxMjNAZ21haWwuY29tIiwiZXhwIjoxNzgwNTY1NjIyfQ.5P9GvpElMgBoeJyZZe0BJU7iMFazkLrdB_fJbidWBXg
+2026-06-03 15:03:43,143 - INFO - get_current_user user_email=raju123@gmail.com
+2026-06-03 15:03:43,169 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanUxMjNAZ21haWwuY29tIiwiZXhwIjoxNzgwNTY1NjIyfQ.5P9GvpElMgBoeJyZZe0BJU7iMFazkLrdB_fJbidWBXg
+2026-06-03 15:03:43,170 - INFO - get_current_user user_email=raju123@gmail.com
+2026-06-03 15:04:10,232 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanUxMjNAZ21haWwuY29tIiwiZXhwIjoxNzgwNTY1NjIyfQ.5P9GvpElMgBoeJyZZe0BJU7iMFazkLrdB_fJbidWBXg
+2026-06-03 15:04:10,232 - INFO - get_current_user user_email=raju123@gmail.com
+2026-06-03 15:04:10,273 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanUxMjNAZ21haWwuY29tIiwiZXhwIjoxNzgwNTY1NjIyfQ.5P9GvpElMgBoeJyZZe0BJU7iMFazkLrdB_fJbidWBXg
+2026-06-03 15:04:10,273 - INFO - get_current_user user_email=raju123@gmail.com
+2026-06-03 15:41:39,347 - INFO - Shutdown
+2026-06-03 15:41:46,916 - INFO - User database initialized
+2026-06-03 15:41:46,917 - INFO - Startup
+2026-06-04 18:04:40,176 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-06-04 18:26:24,602 - INFO - User database initialized
+2026-06-04 18:26:24,602 - INFO - Startup
+2026-06-04 18:43:52,698 - ERROR - Error occurred while registering user: (sqlalchemy.dialects.postgresql.asyncpg.InterfaceError) <class 'asyncpg.exceptions._base.InterfaceError'>: connection is closed
+[SQL: INSERT INTO users (id, username, full_name, email, hashed_password, secret, is_verified) VALUES ($1::UUID, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR, $7::BOOLEAN)]
+[parameters: (UUID('a7702d4c-90a3-49c3-aba1-bc0e42960b12'), 'raju', 'raju', 'raju@gmail.com', '$argon2id$v=19$m=65536,t=3,p=4$skUUEdH9gfXD29/f4KrBvw$oI13ifiiVdW5V2wOQFf+VKsWKGkUWD0oVpWhjeGPs/I', None, False)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2026-06-04 18:45:41,256 - INFO - User raju registered successfully
+2026-06-04 18:45:46,920 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:45:46,920 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:45:46,933 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:45:46,933 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:45:46,954 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:45:46,954 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:45:46,970 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:45:46,970 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:45:51,090 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:45:51,091 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:45:51,104 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:45:51,104 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:46:03,548 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:46:03,548 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:46:03,676 - INFO - User raju updated successfully
+2026-06-04 18:46:07,390 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:46:07,390 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:46:07,401 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:46:07,401 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:46:07,418 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:46:07,418 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 18:46:07,430 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ2FtaWwuY29tIiwiZXhwIjoxNzgwNjY1MzQ2fQ.crsNaWfFnuwnIQgPSlD2GtJtRbm7wsHpcRorprr0m7w
+2026-06-04 18:46:07,431 - INFO - get_current_user user_email=raju@gamil.com
+2026-06-04 19:10:21,580 - INFO - User string registered successfully
+2026-06-04 19:10:44,046 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJleHAiOjE3ODA2NjY4MzF9.nAO0rb7D2uaCtc4KRY2VKuHm8LCRx9DRUqz0fm7FT6Y
+2026-06-04 19:10:44,046 - INFO - get_current_user user_email=user@example.com
+2026-06-04 19:11:08,192 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJleHAiOjE3ODA2NjY4MzF9.nAO0rb7D2uaCtc4KRY2VKuHm8LCRx9DRUqz0fm7FT6Y
+2026-06-04 19:11:08,192 - INFO - get_current_user user_email=user@example.com
+2026-06-04 19:20:32,120 - INFO - User database initialized
+2026-06-04 19:20:32,120 - INFO - Startup
+2026-06-05 14:37:23,758 - INFO - User database initialized
+2026-06-05 14:37:23,759 - INFO - Startup
+2026-06-05 14:38:07,554 - INFO - User raju registered successfully
+2026-06-05 14:38:17,357 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ21haWwuY29tIiwiZXhwIjoxNzgwNzM2ODk2fQ.Rcs2C9oDfciKunTSsxTbC_1ECGhGIRjwIFh4pdiPnoQ
+2026-06-05 14:38:17,357 - INFO - get_current_user user_email=raju@gmail.com
+2026-06-05 14:38:17,367 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ21haWwuY29tIiwiZXhwIjoxNzgwNzM2ODk2fQ.Rcs2C9oDfciKunTSsxTbC_1ECGhGIRjwIFh4pdiPnoQ
+2026-06-05 14:38:17,367 - INFO - get_current_user user_email=raju@gmail.com
+2026-06-05 14:38:17,381 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ21haWwuY29tIiwiZXhwIjoxNzgwNzM2ODk2fQ.Rcs2C9oDfciKunTSsxTbC_1ECGhGIRjwIFh4pdiPnoQ
+2026-06-05 14:38:17,381 - INFO - get_current_user user_email=raju@gmail.com
+2026-06-05 14:38:17,390 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ21haWwuY29tIiwiZXhwIjoxNzgwNzM2ODk2fQ.Rcs2C9oDfciKunTSsxTbC_1ECGhGIRjwIFh4pdiPnoQ
+2026-06-05 14:38:17,390 - INFO - get_current_user user_email=raju@gmail.com
+2026-06-05 14:45:02,364 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ21haWwuY29tIiwiZXhwIjoxNzgwNzM2ODk2fQ.Rcs2C9oDfciKunTSsxTbC_1ECGhGIRjwIFh4pdiPnoQ
+2026-06-05 14:45:02,364 - INFO - get_current_user user_email=raju@gmail.com
+2026-06-05 14:45:02,371 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanVAZ21haWwuY29tIiwiZXhwIjoxNzgwNzM2ODk2fQ.Rcs2C9oDfciKunTSsxTbC_1ECGhGIRjwIFh4pdiPnoQ
+2026-06-05 14:45:02,371 - INFO - get_current_user user_email=raju@gmail.com
+2026-06-07 10:51:52,456 - INFO - User database initialized
+2026-06-07 10:51:52,456 - INFO - Startup
+2026-06-07 10:59:23,413 - INFO - User test registered successfully
+2026-06-07 11:01:58,158 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:01:58,158 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:02:25,584 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:02:25,584 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:02:25,592 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:02:25,592 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:02:42,521 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:02:42,521 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:04:45,243 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:04:45,244 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:07:28,233 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:07:28,233 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:08:55,457 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:08:55,457 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:10:39,061 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:10:39,061 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:10:39,073 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:10:39,074 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:13:17,050 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:13:17,051 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:17:06,355 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:17:06,355 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:17:06,364 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:17:06,365 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:17:39,365 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:17:39,365 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:17:39,378 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:17:39,378 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:17:40,445 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:17:40,445 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 11:17:40,459 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwODk2NTczfQ.QrZzHQh1X5ybU_UMSYMCVsTBwu_3vIpOaAjXcF32K0o
+2026-06-07 11:17:40,459 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:28:42,548 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:28:42,549 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:28:42,566 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:28:42,566 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:28:42,584 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:28:42,585 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:28:42,599 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:28:42,600 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:28:56,764 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:28:56,764 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:29:02,301 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:29:02,302 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:36:56,782 - INFO - User database initialized
+2026-06-07 13:36:56,782 - INFO - Startup
+2026-06-07 13:37:02,006 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:37:02,006 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:37:17,015 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:37:17,015 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:50:00,475 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:50:00,475 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:59:42,971 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:59:42,972 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 13:59:42,985 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 13:59:42,986 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:01:12,520 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:01:12,520 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:01:12,533 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:01:12,533 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:04:34,033 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:04:34,033 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:04:37,844 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:04:37,844 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:04:46,751 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:04:46,751 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:06:49,128 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:06:49,128 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:11:51,446 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:11:51,446 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:12:04,331 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:12:04,332 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:18:28,439 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:18:28,439 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:18:32,938 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:18:32,939 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:21:50,038 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:21:50,038 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:23:55,809 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:23:55,809 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:25:00,226 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA1NTIyfQ._pZORDbWBpammyJMOQS5h7EBgv9GTvMZgBIlpD8AYLI
+2026-06-07 14:25:00,226 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:29:41,108 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:29:41,108 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:29:41,115 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:29:41,115 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:29:41,123 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:29:41,123 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:29:41,132 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:29:41,133 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:29:48,905 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:29:48,905 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:38:07,519 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:38:07,519 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:40:40,954 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:40:40,955 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:40:51,490 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:40:51,490 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:42:58,545 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:42:58,545 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:44:11,165 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:44:11,165 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:44:29,862 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:44:29,863 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:47:53,147 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:47:53,147 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 14:58:15,798 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 14:58:15,798 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 15:03:04,602 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 15:03:04,602 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 15:05:25,473 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTA5MTgxfQ.G14FvUHnQY3OO37_dmssYZFXB2LwYwyCagnuOZ4ncMo
+2026-06-07 15:05:25,473 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 15:53:00,970 - INFO - User database initialized
+2026-06-07 15:53:00,970 - INFO - Startup
+2026-06-07 15:53:42,510 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 15:53:42,510 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 15:53:42,519 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 15:53:42,519 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 15:53:42,528 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 15:53:42,528 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 15:53:42,534 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 15:53:42,534 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 15:59:47,512 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 15:59:47,513 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 15:59:47,519 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 15:59:47,519 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:02:15,933 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:02:15,933 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:02:24,375 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:02:24,375 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:04:25,729 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:04:25,729 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:05:55,061 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:05:55,061 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:06:22,420 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:06:22,421 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:12:10,659 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:12:10,659 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:15:58,976 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:15:58,976 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:16:34,853 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:16:34,854 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:22:10,306 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:22:10,306 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:24:40,888 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:24:40,888 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:24:47,123 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:24:47,123 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:24:49,152 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:24:49,152 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:26:32,632 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:26:32,632 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:26:37,823 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:26:37,824 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:28:32,184 - INFO - Shutdown
+2026-06-07 16:28:32,695 - INFO - User database initialized
+2026-06-07 16:28:32,695 - INFO - Startup
+2026-06-07 16:28:40,327 - INFO - Shutdown
+2026-06-07 16:28:40,890 - INFO - User database initialized
+2026-06-07 16:28:40,891 - INFO - Startup
+2026-06-07 16:28:42,197 - INFO - Shutdown
+2026-06-07 16:28:57,492 - INFO - User database initialized
+2026-06-07 16:28:57,493 - INFO - Startup
+2026-06-07 16:29:00,201 - INFO - Shutdown
+2026-06-07 16:29:00,716 - INFO - User database initialized
+2026-06-07 16:29:00,716 - INFO - Startup
+2026-06-07 16:29:05,130 - INFO - Shutdown
+2026-06-07 16:29:05,653 - INFO - User database initialized
+2026-06-07 16:29:05,654 - INFO - Startup
+2026-06-07 16:29:07,965 - INFO - Shutdown
+2026-06-07 16:29:08,464 - INFO - User database initialized
+2026-06-07 16:29:08,464 - INFO - Startup
+2026-06-07 16:29:14,586 - INFO - Shutdown
+2026-06-07 16:29:15,189 - INFO - User database initialized
+2026-06-07 16:29:15,190 - INFO - Startup
+2026-06-07 16:29:16,094 - INFO - Shutdown
+2026-06-07 16:29:20,838 - INFO - User database initialized
+2026-06-07 16:29:20,838 - INFO - Startup
+2026-06-07 16:29:21,742 - INFO - Shutdown
+2026-06-07 16:29:28,852 - INFO - User database initialized
+2026-06-07 16:29:28,852 - INFO - Startup
+2026-06-07 16:29:30,157 - INFO - Shutdown
+2026-06-07 16:29:30,674 - INFO - User database initialized
+2026-06-07 16:29:30,674 - INFO - Startup
+2026-06-07 16:29:33,785 - INFO - Shutdown
+2026-06-07 16:29:37,796 - INFO - User database initialized
+2026-06-07 16:29:37,797 - INFO - Startup
+2026-06-07 16:29:41,109 - INFO - Shutdown
+2026-06-07 16:29:41,705 - INFO - User database initialized
+2026-06-07 16:29:41,705 - INFO - Startup
+2026-06-07 16:29:43,310 - INFO - Shutdown
+2026-06-07 16:29:43,856 - INFO - User database initialized
+2026-06-07 16:29:43,856 - INFO - Startup
+2026-06-07 16:29:49,375 - INFO - Shutdown
+2026-06-07 16:29:49,916 - INFO - User database initialized
+2026-06-07 16:29:49,916 - INFO - Startup
+2026-06-07 16:29:52,928 - INFO - Shutdown
+2026-06-07 16:29:53,528 - INFO - User database initialized
+2026-06-07 16:29:53,528 - INFO - Startup
+2026-06-07 16:29:56,033 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:29:56,033 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:32:18,918 - INFO - Shutdown
+2026-06-07 16:32:19,508 - INFO - User database initialized
+2026-06-07 16:32:19,508 - INFO - Startup
+2026-06-07 16:32:21,918 - INFO - Shutdown
+2026-06-07 16:32:22,440 - INFO - User database initialized
+2026-06-07 16:32:22,441 - INFO - Startup
+2026-06-07 16:32:24,449 - INFO - Shutdown
+2026-06-07 16:32:24,998 - INFO - User database initialized
+2026-06-07 16:32:24,998 - INFO - Startup
+2026-06-07 16:32:26,302 - INFO - Shutdown
+2026-06-07 16:32:26,864 - INFO - User database initialized
+2026-06-07 16:32:26,864 - INFO - Startup
+2026-06-07 16:32:39,615 - INFO - Shutdown
+2026-06-07 16:32:40,191 - INFO - User database initialized
+2026-06-07 16:32:40,191 - INFO - Startup
+2026-06-07 16:32:40,794 - INFO - Shutdown
+2026-06-07 16:32:41,394 - INFO - User database initialized
+2026-06-07 16:32:41,395 - INFO - Startup
+2026-06-07 16:32:44,806 - INFO - Shutdown
+2026-06-07 16:32:45,392 - INFO - User database initialized
+2026-06-07 16:32:45,392 - INFO - Startup
+2026-06-07 16:32:46,295 - INFO - Shutdown
+2026-06-07 16:32:46,859 - INFO - User database initialized
+2026-06-07 16:32:46,859 - INFO - Startup
+2026-06-07 16:32:48,164 - INFO - Shutdown
+2026-06-07 16:32:48,686 - INFO - User database initialized
+2026-06-07 16:32:48,687 - INFO - Startup
+2026-06-07 16:32:53,201 - INFO - Shutdown
+2026-06-07 16:32:53,730 - INFO - User database initialized
+2026-06-07 16:32:53,730 - INFO - Startup
+2026-06-07 16:32:56,442 - INFO - Shutdown
+2026-06-07 16:32:57,028 - INFO - User database initialized
+2026-06-07 16:32:57,028 - INFO - Startup
+2026-06-07 16:32:59,335 - INFO - Shutdown
+2026-06-07 16:32:59,946 - INFO - User database initialized
+2026-06-07 16:32:59,947 - INFO - Startup
+2026-06-07 16:33:01,553 - INFO - Shutdown
+2026-06-07 16:33:02,183 - INFO - User database initialized
+2026-06-07 16:33:02,183 - INFO - Startup
+2026-06-07 16:33:03,087 - INFO - Shutdown
+2026-06-07 16:33:03,634 - INFO - User database initialized
+2026-06-07 16:33:03,634 - INFO - Startup
+2026-06-07 16:33:04,237 - INFO - Shutdown
+2026-06-07 16:33:04,771 - INFO - User database initialized
+2026-06-07 16:33:04,771 - INFO - Startup
+2026-06-07 16:33:45,592 - INFO - Shutdown
+2026-06-07 16:33:46,260 - INFO - User database initialized
+2026-06-07 16:33:46,260 - INFO - Startup
+2026-06-07 16:33:47,464 - INFO - Shutdown
+2026-06-07 16:33:48,162 - INFO - User database initialized
+2026-06-07 16:33:48,162 - INFO - Startup
+2026-06-07 16:33:50,067 - INFO - Shutdown
+2026-06-07 16:33:50,770 - INFO - User database initialized
+2026-06-07 16:33:50,770 - INFO - Startup
+2026-06-07 16:33:57,082 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:33:57,082 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:34:23,919 - INFO - Shutdown
+2026-06-07 16:34:24,666 - INFO - User database initialized
+2026-06-07 16:34:24,666 - INFO - Startup
+2026-06-07 16:34:25,169 - INFO - Shutdown
+2026-06-07 16:34:25,870 - INFO - User database initialized
+2026-06-07 16:34:25,870 - INFO - Startup
+2026-06-07 16:34:29,581 - INFO - Shutdown
+2026-06-07 16:34:30,233 - INFO - User database initialized
+2026-06-07 16:34:30,234 - INFO - Startup
+2026-06-07 16:34:32,641 - INFO - Shutdown
+2026-06-07 16:34:36,223 - INFO - User database initialized
+2026-06-07 16:34:36,223 - INFO - Startup
+2026-06-07 16:34:37,026 - INFO - Shutdown
+2026-06-07 16:34:37,776 - INFO - User database initialized
+2026-06-07 16:34:37,776 - INFO - Startup
+2026-06-07 16:34:38,579 - INFO - Shutdown
+2026-06-07 16:34:41,697 - INFO - User database initialized
+2026-06-07 16:34:41,697 - INFO - Startup
+2026-06-07 16:34:47,412 - INFO - Shutdown
+2026-06-07 16:34:48,104 - INFO - User database initialized
+2026-06-07 16:34:48,104 - INFO - Startup
+2026-06-07 16:34:52,157 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:34:52,158 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:35:46,320 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:35:46,321 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:35:49,183 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:35:49,183 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:35:51,539 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:35:51,539 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:36:42,151 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:36:42,151 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:40:59,272 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:40:59,272 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:41:25,582 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:41:25,582 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:41:31,647 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:41:31,647 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:41:44,873 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:41:44,873 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:43:16,742 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:43:16,742 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:43:25,514 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:43:25,514 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:43:46,949 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:43:46,949 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:43:54,918 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:43:54,920 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:44:41,479 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:44:41,479 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:45:10,014 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:45:10,014 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:45:14,189 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:45:14,189 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:45:18,658 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:45:18,658 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:45:19,513 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:45:19,513 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:45:23,643 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:45:23,644 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:45:23,645 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:45:23,645 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:45:23,647 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:45:23,648 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:47:39,850 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:47:39,851 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:47:57,465 - INFO - Shutdown
+2026-06-07 16:47:58,174 - INFO - User database initialized
+2026-06-07 16:47:58,174 - INFO - Startup
+2026-06-07 16:48:11,236 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:48:11,237 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:48:17,817 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:48:17,817 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:48:17,819 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:48:17,819 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:48:17,821 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:48:17,821 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:48:17,823 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:48:17,823 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:48:28,291 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:48:28,291 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:48:28,291 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE0MjIyfQ.RiA4Pktqh491UGHcPPvzT13iOu-UZ_lDr8-l5FDtKkQ
+2026-06-07 16:48:28,292 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 16:49:35,784 - INFO - Shutdown
+2026-06-07 16:49:36,373 - INFO - User database initialized
+2026-06-07 16:49:36,373 - INFO - Startup
+2026-06-07 16:49:46,709 - INFO - Shutdown
+2026-06-07 16:49:47,220 - INFO - User database initialized
+2026-06-07 16:49:47,220 - INFO - Startup
+2026-06-07 16:50:38,164 - INFO - Shutdown
+2026-06-07 16:50:38,677 - INFO - User database initialized
+2026-06-07 16:50:38,677 - INFO - Startup
+2026-06-07 16:51:43,519 - INFO - Shutdown
+2026-06-07 16:51:44,065 - INFO - User database initialized
+2026-06-07 16:51:44,065 - INFO - Startup
+2026-06-07 16:51:57,116 - INFO - Shutdown
+2026-06-07 16:51:57,615 - INFO - User database initialized
+2026-06-07 16:51:57,615 - INFO - Startup
+2026-06-07 16:52:00,325 - INFO - Shutdown
+2026-06-07 16:52:01,839 - INFO - User database initialized
+2026-06-07 16:52:01,839 - INFO - Startup
+2026-06-07 16:52:45,804 - INFO - Shutdown
+2026-06-07 16:52:56,225 - INFO - User database initialized
+2026-06-07 16:52:56,225 - INFO - Startup
+2026-06-07 16:52:57,630 - INFO - Shutdown
+2026-06-07 16:52:58,156 - INFO - User database initialized
+2026-06-07 16:52:58,156 - INFO - Startup
+2026-06-07 16:52:58,758 - INFO - Shutdown
+2026-06-07 16:52:59,353 - INFO - User database initialized
+2026-06-07 16:52:59,353 - INFO - Startup
+2026-06-07 16:52:59,856 - INFO - Shutdown
+2026-06-07 16:53:00,432 - INFO - User database initialized
+2026-06-07 16:53:00,432 - INFO - Startup
+2026-06-07 16:53:03,745 - INFO - Shutdown
+2026-06-07 17:06:42,173 - INFO - User database initialized
+2026-06-07 17:06:42,173 - INFO - Startup
+2026-06-07 17:06:52,646 - INFO - get_current_user token=None
+2026-06-07 17:07:17,966 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE4NjMxfQ.TnLVhbEltQzaAI15qHB6n-7QfxsRwtC3sT2H-Lk-huQ
+2026-06-07 17:07:17,967 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 17:07:20,315 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 17:10:42,231 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE4NjMxfQ.TnLVhbEltQzaAI15qHB6n-7QfxsRwtC3sT2H-Lk-huQ
+2026-06-07 17:10:42,231 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 17:10:42,248 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE4NjMxfQ.TnLVhbEltQzaAI15qHB6n-7QfxsRwtC3sT2H-Lk-huQ
+2026-06-07 17:10:42,248 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 17:10:59,074 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE4NjMxfQ.TnLVhbEltQzaAI15qHB6n-7QfxsRwtC3sT2H-Lk-huQ
+2026-06-07 17:10:59,075 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 17:13:19,926 - INFO - get_current_user token=None
+2026-06-07 17:13:45,216 - INFO - get_current_user token=None
+2026-06-07 17:15:42,533 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE5MTQyfQ.XnMGtFA7MeKTiOFLVyo32dteaUwBp2pv7mvvhildc5k
+2026-06-07 17:15:42,533 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 17:15:42,540 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE5MTQyfQ.XnMGtFA7MeKTiOFLVyo32dteaUwBp2pv7mvvhildc5k
+2026-06-07 17:15:42,540 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 17:15:42,554 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE5MTQyfQ.XnMGtFA7MeKTiOFLVyo32dteaUwBp2pv7mvvhildc5k
+2026-06-07 17:15:42,555 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 17:15:42,562 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE5MTQyfQ.XnMGtFA7MeKTiOFLVyo32dteaUwBp2pv7mvvhildc5k
+2026-06-07 17:15:42,562 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 17:15:48,187 - INFO - get_current_user token=None
+2026-06-07 17:17:26,433 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTE5MTQyfQ.XnMGtFA7MeKTiOFLVyo32dteaUwBp2pv7mvvhildc5k
+2026-06-07 17:17:26,434 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 17:17:28,999 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 17:18:11,917 - INFO - Shutdown
+2026-06-07 17:18:16,926 - INFO - User database initialized
+2026-06-07 17:18:16,926 - INFO - Startup
+2026-06-07 17:30:18,273 - INFO - Shutdown
+2026-06-07 17:30:19,048 - INFO - User database initialized
+2026-06-07 17:30:19,048 - INFO - Startup
+2026-06-07 17:30:24,266 - INFO - Shutdown
+2026-06-07 17:30:24,806 - INFO - User database initialized
+2026-06-07 17:30:24,806 - INFO - Startup
+2026-06-07 17:30:42,578 - INFO - Shutdown
+2026-06-07 17:30:43,198 - INFO - User database initialized
+2026-06-07 17:30:43,198 - INFO - Startup
+2026-06-07 17:30:49,923 - INFO - Shutdown
+2026-06-07 17:30:50,599 - INFO - User database initialized
+2026-06-07 17:30:50,599 - INFO - Startup
+2026-06-07 17:31:01,351 - INFO - Shutdown
+2026-06-07 17:31:02,202 - INFO - User database initialized
+2026-06-07 17:31:02,203 - INFO - Startup
+2026-06-07 17:31:04,711 - INFO - Shutdown
+2026-06-07 17:31:05,343 - INFO - User database initialized
+2026-06-07 17:31:05,343 - INFO - Startup
+2026-06-07 17:31:17,591 - INFO - Shutdown
+2026-06-07 17:31:18,235 - INFO - User database initialized
+2026-06-07 17:31:18,235 - INFO - Startup
+2026-06-07 17:31:31,280 - INFO - Shutdown
+2026-06-07 17:31:31,924 - INFO - User database initialized
+2026-06-07 17:31:31,924 - INFO - Startup
+2026-06-07 17:31:33,831 - INFO - Shutdown
+2026-06-07 17:31:34,404 - INFO - User database initialized
+2026-06-07 17:31:34,404 - INFO - Startup
+2026-06-07 17:32:01,229 - INFO - Shutdown
+2026-06-07 17:32:01,979 - INFO - User database initialized
+2026-06-07 17:32:01,979 - INFO - Startup
+2026-06-07 17:32:03,988 - INFO - Shutdown
+2026-06-07 17:32:04,710 - INFO - User database initialized
+2026-06-07 17:32:04,711 - INFO - Startup
+2026-06-07 17:32:07,322 - INFO - Shutdown
+2026-06-07 17:32:08,093 - INFO - User database initialized
+2026-06-07 17:32:08,093 - INFO - Startup
+2026-06-07 17:32:13,113 - INFO - Shutdown
+2026-06-07 17:32:13,790 - INFO - User database initialized
+2026-06-07 17:32:13,790 - INFO - Startup
+2026-06-07 17:32:25,637 - INFO - Shutdown
+2026-06-07 17:32:26,342 - INFO - User database initialized
+2026-06-07 17:32:26,342 - INFO - Startup
+2026-06-07 17:32:26,846 - INFO - Shutdown
+2026-06-07 17:32:27,507 - INFO - User database initialized
+2026-06-07 17:32:27,507 - INFO - Startup
+2026-06-07 17:32:31,526 - INFO - Shutdown
+2026-06-07 17:32:32,134 - INFO - User database initialized
+2026-06-07 17:32:32,134 - INFO - Startup
+2026-06-07 17:32:32,637 - INFO - Shutdown
+2026-06-07 17:32:33,181 - INFO - User database initialized
+2026-06-07 17:32:33,181 - INFO - Startup
+2026-06-07 17:32:36,595 - INFO - Shutdown
+2026-06-07 17:32:37,412 - INFO - User database initialized
+2026-06-07 17:32:37,413 - INFO - Startup
+2026-06-07 17:32:38,418 - INFO - Shutdown
+2026-06-07 17:32:39,127 - INFO - User database initialized
+2026-06-07 17:32:39,127 - INFO - Startup
+2026-06-07 17:32:41,338 - INFO - Shutdown
+2026-06-07 17:32:41,996 - INFO - User database initialized
+2026-06-07 17:32:41,997 - INFO - Startup
+2026-06-07 17:32:46,820 - INFO - Shutdown
+2026-06-07 17:32:47,501 - INFO - User database initialized
+2026-06-07 17:32:47,501 - INFO - Startup
+2026-06-07 17:34:14,846 - INFO - Shutdown
+2026-06-07 18:31:29,143 - INFO - User database initialized
+2026-06-07 18:31:29,143 - INFO - Startup
+2026-06-07 18:32:05,109 - INFO - get_current_user token=None
+2026-06-07 18:32:25,222 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTIzNzQxfQ.d9glN81fZE05GLFfrCfC5wWeKiPokwx3ammWJVgvqfM
+2026-06-07 18:32:25,223 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 18:33:21,686 - INFO - Shutdown
+2026-06-07 18:33:22,246 - INFO - User database initialized
+2026-06-07 18:33:22,246 - INFO - Startup
+2026-06-07 18:33:31,987 - INFO - Shutdown
+2026-06-07 18:33:35,086 - INFO - User database initialized
+2026-06-07 18:33:35,086 - INFO - Startup
+2026-06-07 18:33:40,609 - INFO - Shutdown
+2026-06-07 18:33:50,661 - INFO - User database initialized
+2026-06-07 18:33:50,662 - INFO - Startup
+2026-06-07 18:34:30,487 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTIzNzQxfQ.d9glN81fZE05GLFfrCfC5wWeKiPokwx3ammWJVgvqfM
+2026-06-07 18:34:30,487 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 18:35:40,631 - INFO - Shutdown
+2026-06-07 18:35:42,218 - INFO - User database initialized
+2026-06-07 18:35:42,218 - INFO - Startup
+2026-06-07 18:37:34,123 - INFO - Shutdown
+2026-06-07 18:37:34,683 - INFO - User database initialized
+2026-06-07 18:37:34,683 - INFO - Startup
+2026-06-07 18:37:36,992 - INFO - Shutdown
+2026-06-07 18:37:37,588 - INFO - User database initialized
+2026-06-07 18:37:37,588 - INFO - Startup
+2026-06-07 18:37:38,794 - INFO - Shutdown
+2026-06-07 18:37:39,383 - INFO - User database initialized
+2026-06-07 18:37:39,384 - INFO - Startup
+2026-06-07 18:37:39,585 - INFO - Shutdown
+2026-06-07 18:37:42,522 - INFO - User database initialized
+2026-06-07 18:37:42,522 - INFO - Startup
+2026-06-07 18:38:21,363 - INFO - Shutdown
+2026-06-07 18:38:21,931 - INFO - User database initialized
+2026-06-07 18:38:21,931 - INFO - Startup
+2026-06-07 18:38:26,729 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTIzNzQxfQ.d9glN81fZE05GLFfrCfC5wWeKiPokwx3ammWJVgvqfM
+2026-06-07 18:38:26,729 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 18:38:29,167 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 18:46:52,457 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTIzNzQxfQ.d9glN81fZE05GLFfrCfC5wWeKiPokwx3ammWJVgvqfM
+2026-06-07 18:46:52,458 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 18:46:52,469 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTIzNzQxfQ.d9glN81fZE05GLFfrCfC5wWeKiPokwx3ammWJVgvqfM
+2026-06-07 18:46:52,469 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 18:53:15,939 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTIzNzQxfQ.d9glN81fZE05GLFfrCfC5wWeKiPokwx3ammWJVgvqfM
+2026-06-07 18:53:15,940 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 18:53:31,914 - INFO - Shutdown
+2026-06-07 18:53:32,720 - INFO - User database initialized
+2026-06-07 18:53:32,720 - INFO - Startup
+2026-06-07 18:53:36,532 - INFO - Shutdown
+2026-06-07 18:53:37,361 - INFO - User database initialized
+2026-06-07 18:53:37,361 - INFO - Startup
+2026-06-07 18:54:09,333 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTIzNzQxfQ.d9glN81fZE05GLFfrCfC5wWeKiPokwx3ammWJVgvqfM
+2026-06-07 18:54:09,333 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 18:56:27,252 - INFO - get_current_user token=None
+2026-06-07 18:58:05,961 - INFO - get_current_user token=None
+2026-06-07 18:58:31,426 - INFO - get_current_user token=None
+2026-06-07 18:59:16,587 - INFO - get_current_user token=None
+2026-06-07 19:00:05,720 - INFO - get_current_user token=None
+2026-06-07 19:00:54,691 - INFO - get_current_user token=None
+2026-06-07 19:08:38,107 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:08:38,107 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:08:38,122 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:08:38,122 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:08:38,143 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:08:38,143 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:08:38,152 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:08:38,153 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:08:42,828 - INFO - get_current_user token=None
+2026-06-07 19:17:09,031 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:17:09,031 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:20:31,697 - INFO - get_current_user token=None
+2026-06-07 19:23:50,212 - INFO - get_current_user token=None
+2026-06-07 19:25:11,146 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:25:11,147 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:25:14,564 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:25:19,345 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:25:19,345 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:25:23,028 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:25:23,028 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:25:23,431 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:25:36,748 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:25:36,748 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:25:37,203 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:26:15,897 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:26:15,897 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:26:16,394 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:28:20,060 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:28:20,061 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:28:20,741 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:28:21,750 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:28:21,753 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:29:15,218 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:29:15,218 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:29:28,644 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:29:28,644 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:29:29,163 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:29:48,189 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:29:48,189 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:29:48,861 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:31:43,612 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:31:43,612 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:31:44,264 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:34:14,286 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:34:14,287 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:34:14,700 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:34:53,261 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:34:53,261 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:34:53,931 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:37:21,166 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:37:21,166 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:37:21,861 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 19:40:42,438 - INFO - Shutdown
+2026-06-07 19:41:28,971 - INFO - User database initialized
+2026-06-07 19:41:28,971 - INFO - Startup
+2026-06-07 19:41:29,675 - INFO - Shutdown
+2026-06-07 19:41:30,720 - INFO - User database initialized
+2026-06-07 19:41:30,721 - INFO - Startup
+2026-06-07 19:41:32,830 - INFO - Shutdown
+2026-06-07 19:41:33,869 - INFO - User database initialized
+2026-06-07 19:41:33,870 - INFO - Startup
+2026-06-07 19:41:34,073 - INFO - Shutdown
+2026-06-07 19:41:35,085 - INFO - User database initialized
+2026-06-07 19:41:35,086 - INFO - Startup
+2026-06-07 19:41:41,305 - INFO - Shutdown
+2026-06-07 19:41:42,447 - INFO - User database initialized
+2026-06-07 19:41:42,447 - INFO - Startup
+2026-06-07 19:41:42,649 - INFO - Shutdown
+2026-06-07 19:41:43,658 - INFO - User database initialized
+2026-06-07 19:41:43,658 - INFO - Startup
+2026-06-07 19:42:08,640 - INFO - Shutdown
+2026-06-07 19:42:17,334 - INFO - User database initialized
+2026-06-07 19:42:17,334 - INFO - Startup
+2026-06-07 19:42:41,206 - INFO - Shutdown
+2026-06-07 19:42:42,254 - INFO - User database initialized
+2026-06-07 19:42:42,254 - INFO - Startup
+2026-06-07 19:42:43,760 - INFO - Shutdown
+2026-06-07 19:42:54,041 - INFO - User database initialized
+2026-06-07 19:42:54,041 - INFO - Startup
+2026-06-07 19:43:32,681 - INFO - Shutdown
+2026-06-07 19:43:34,391 - INFO - User database initialized
+2026-06-07 19:43:34,391 - INFO - Startup
+2026-06-07 19:43:54,156 - INFO - Shutdown
+2026-06-07 19:43:55,150 - INFO - User database initialized
+2026-06-07 19:43:55,151 - INFO - Startup
+2026-06-07 19:45:49,957 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:45:49,957 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:45:53,702 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:45:53,703 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:46:16,339 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:46:16,339 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:46:19,087 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:46:19,088 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:46:23,367 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:46:23,367 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:48:48,386 - INFO - Shutdown
+2026-06-07 19:48:51,995 - INFO - User database initialized
+2026-06-07 19:48:51,995 - INFO - Startup
+2026-06-07 19:48:52,399 - INFO - Shutdown
+2026-06-07 19:48:53,404 - INFO - User database initialized
+2026-06-07 19:48:53,404 - INFO - Startup
+2026-06-07 19:48:54,509 - INFO - Shutdown
+2026-06-07 19:49:22,569 - INFO - User database initialized
+2026-06-07 19:49:22,569 - INFO - Startup
+2026-06-07 19:49:26,584 - INFO - Shutdown
+2026-06-07 19:49:28,116 - INFO - User database initialized
+2026-06-07 19:49:28,116 - INFO - Startup
+2026-06-07 19:49:28,218 - INFO - Shutdown
+2026-06-07 19:49:29,245 - INFO - User database initialized
+2026-06-07 19:49:29,245 - INFO - Startup
+2026-06-07 19:49:42,596 - INFO - Shutdown
+2026-06-07 19:49:44,127 - INFO - User database initialized
+2026-06-07 19:49:44,127 - INFO - Startup
+2026-06-07 19:49:58,180 - INFO - Shutdown
+2026-06-07 19:49:59,770 - INFO - User database initialized
+2026-06-07 19:49:59,770 - INFO - Startup
+2026-06-07 19:50:03,887 - INFO - Shutdown
+2026-06-07 19:50:05,131 - INFO - User database initialized
+2026-06-07 19:50:05,131 - INFO - Startup
+2026-06-07 19:54:36,780 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:54:36,781 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:55:49,651 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:55:49,651 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 19:58:57,684 - INFO - Shutdown
+2026-06-07 19:58:58,612 - INFO - User database initialized
+2026-06-07 19:58:58,612 - INFO - Startup
+2026-06-07 19:59:00,519 - INFO - Shutdown
+2026-06-07 19:59:01,360 - INFO - User database initialized
+2026-06-07 19:59:01,360 - INFO - Startup
+2026-06-07 19:59:03,769 - INFO - Shutdown
+2026-06-07 19:59:04,576 - INFO - User database initialized
+2026-06-07 19:59:04,576 - INFO - Startup
+2026-06-07 19:59:10,997 - INFO - Shutdown
+2026-06-07 19:59:11,811 - INFO - User database initialized
+2026-06-07 19:59:11,811 - INFO - Startup
+2026-06-07 19:59:13,817 - INFO - Shutdown
+2026-06-07 19:59:14,609 - INFO - User database initialized
+2026-06-07 19:59:14,609 - INFO - Startup
+2026-06-07 19:59:15,914 - INFO - Shutdown
+2026-06-07 19:59:16,755 - INFO - User database initialized
+2026-06-07 19:59:16,755 - INFO - Startup
+2026-06-07 19:59:17,960 - INFO - Shutdown
+2026-06-07 19:59:18,837 - INFO - User database initialized
+2026-06-07 19:59:18,837 - INFO - Startup
+2026-06-07 19:59:20,042 - INFO - Shutdown
+2026-06-07 19:59:20,857 - INFO - User database initialized
+2026-06-07 19:59:20,857 - INFO - Startup
+2026-06-07 19:59:22,395 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 19:59:22,395 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:01:16,305 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 20:01:16,306 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:02:44,878 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 20:02:44,878 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:02:47,897 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:04:21,454 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI1OTE3fQ.cnFBjA_GTdIZUE_1-FsAWzJbByesgzQ4WRDoXEUzv64
+2026-06-07 20:04:21,454 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:04:21,837 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:11:31,628 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:11:31,628 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:11:31,635 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:11:31,636 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:11:31,644 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:11:31,644 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:11:31,651 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:11:31,651 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:11:36,515 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:11:36,515 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:11:39,536 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:12:25,282 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:12:25,282 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:12:25,658 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:13:19,123 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:13:19,123 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:13:22,580 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:13:22,580 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:13:22,875 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:13:50,497 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:13:50,497 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:13:59,647 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:13:59,647 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:13:59,976 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:15:49,269 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:15:49,270 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:15:49,642 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:16:36,897 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:16:36,897 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:16:37,274 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:18:47,395 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:18:47,395 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:18:47,774 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:19:11,596 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:19:11,596 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:19:11,972 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:19:18,429 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:19:18,429 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:19:20,665 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:19:20,666 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:19:20,974 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:19:27,543 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:19:27,543 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:19:27,915 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:19:36,972 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:19:36,972 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:19:37,343 - INFO - HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-06-07 20:23:38,334 - INFO - Shutdown
+2026-06-07 20:23:39,159 - INFO - User database initialized
+2026-06-07 20:23:39,159 - INFO - Startup
+2026-06-07 20:23:43,173 - INFO - Shutdown
+2026-06-07 20:23:43,933 - INFO - User database initialized
+2026-06-07 20:23:43,934 - INFO - Startup
+2026-06-07 20:23:56,373 - INFO - Shutdown
+2026-06-07 20:23:57,163 - INFO - User database initialized
+2026-06-07 20:23:57,164 - INFO - Startup
+2026-06-07 20:24:19,244 - INFO - Shutdown
+2026-06-07 20:24:20,032 - INFO - User database initialized
+2026-06-07 20:24:20,032 - INFO - Startup
+2026-06-07 20:24:22,942 - INFO - Shutdown
+2026-06-07 20:24:23,785 - INFO - User database initialized
+2026-06-07 20:24:23,786 - INFO - Startup
+2026-06-07 20:24:25,793 - INFO - Shutdown
+2026-06-07 20:24:26,580 - INFO - User database initialized
+2026-06-07 20:24:26,580 - INFO - Startup
+2026-06-07 20:24:30,997 - INFO - Shutdown
+2026-06-07 20:24:31,785 - INFO - User database initialized
+2026-06-07 20:24:31,785 - INFO - Startup
+2026-06-07 20:25:37,902 - INFO - Shutdown
+2026-06-07 20:27:13,044 - INFO - User database initialized
+2026-06-07 20:27:13,044 - INFO - Startup
+2026-06-07 20:27:15,051 - INFO - Shutdown
+2026-06-07 20:27:15,852 - INFO - User database initialized
+2026-06-07 20:27:15,853 - INFO - Startup
+2026-06-07 20:27:18,762 - INFO - Shutdown
+2026-06-07 20:27:19,657 - INFO - User database initialized
+2026-06-07 20:27:19,657 - INFO - Startup
+2026-06-07 20:27:21,263 - INFO - Shutdown
+2026-06-07 20:27:22,084 - INFO - User database initialized
+2026-06-07 20:27:22,084 - INFO - Startup
+2026-06-07 20:27:28,503 - INFO - Shutdown
+2026-06-07 20:27:34,010 - INFO - User database initialized
+2026-06-07 20:27:34,010 - INFO - Startup
+2026-06-07 20:27:38,425 - INFO - Shutdown
+2026-06-07 20:27:39,204 - INFO - User database initialized
+2026-06-07 20:27:39,204 - INFO - Startup
+2026-06-07 20:27:40,910 - INFO - Shutdown
+2026-06-07 20:27:41,776 - INFO - User database initialized
+2026-06-07 20:27:41,776 - INFO - Startup
+2026-06-07 20:27:48,098 - INFO - Shutdown
+2026-06-07 20:27:48,974 - INFO - User database initialized
+2026-06-07 20:27:48,975 - INFO - Startup
+2026-06-07 20:27:52,186 - INFO - Shutdown
+2026-06-07 20:27:52,943 - INFO - User database initialized
+2026-06-07 20:27:52,943 - INFO - Startup
+2026-06-07 20:28:21,635 - INFO - Shutdown
+2026-06-07 20:28:22,465 - INFO - User database initialized
+2026-06-07 20:28:22,465 - INFO - Startup
+2026-06-07 20:28:22,867 - INFO - Shutdown
+2026-06-07 20:28:23,632 - INFO - User database initialized
+2026-06-07 20:28:23,632 - INFO - Startup
+2026-06-07 20:28:38,083 - INFO - Shutdown
+2026-06-07 20:28:38,925 - INFO - User database initialized
+2026-06-07 20:28:38,925 - INFO - Startup
+2026-06-07 20:28:45,246 - INFO - Shutdown
+2026-06-07 20:28:46,770 - INFO - User database initialized
+2026-06-07 20:28:46,771 - INFO - Startup
+2026-06-07 20:29:54,017 - INFO - Shutdown
+2026-06-07 20:31:04,694 - INFO - User database initialized
+2026-06-07 20:31:04,694 - INFO - Startup
+2026-06-07 20:31:05,196 - INFO - Shutdown
+2026-06-07 20:31:06,027 - INFO - User database initialized
+2026-06-07 20:31:06,028 - INFO - Startup
+2026-06-07 20:31:06,831 - INFO - Shutdown
+2026-06-07 20:31:07,659 - INFO - User database initialized
+2026-06-07 20:31:07,660 - INFO - Startup
+2026-06-07 20:31:08,864 - INFO - Shutdown
+2026-06-07 20:31:09,659 - INFO - User database initialized
+2026-06-07 20:31:09,659 - INFO - Startup
+2026-06-07 20:34:43,234 - INFO - Shutdown
+2026-06-07 20:34:44,010 - INFO - User database initialized
+2026-06-07 20:34:44,010 - INFO - Startup
+2026-06-07 20:34:44,513 - INFO - Shutdown
+2026-06-07 20:34:45,387 - INFO - User database initialized
+2026-06-07 20:34:45,388 - INFO - Startup
+2026-06-07 20:34:45,790 - INFO - Shutdown
+2026-06-07 20:35:01,478 - INFO - User database initialized
+2026-06-07 20:35:01,478 - INFO - Startup
+2026-06-07 20:35:17,835 - INFO - Shutdown
+2026-06-07 20:35:18,645 - INFO - User database initialized
+2026-06-07 20:35:18,646 - INFO - Startup
+2026-06-07 20:35:21,456 - INFO - Shutdown
+2026-06-07 20:35:22,262 - INFO - User database initialized
+2026-06-07 20:35:22,262 - INFO - Startup
+2026-06-07 20:35:25,974 - INFO - Shutdown
+2026-06-07 20:35:26,850 - INFO - User database initialized
+2026-06-07 20:35:26,851 - INFO - Startup
+2026-06-07 20:35:30,364 - INFO - Shutdown
+2026-06-07 20:35:31,181 - INFO - User database initialized
+2026-06-07 20:35:31,181 - INFO - Startup
+2026-06-07 20:35:42,717 - INFO - Shutdown
+2026-06-07 20:35:48,214 - INFO - User database initialized
+2026-06-07 20:35:48,214 - INFO - Startup
+2026-06-07 20:36:19,606 - INFO - Shutdown
+2026-06-07 20:36:20,394 - INFO - User database initialized
+2026-06-07 20:36:20,394 - INFO - Startup
+2026-06-07 20:36:23,305 - INFO - Shutdown
+2026-06-07 20:36:24,094 - INFO - User database initialized
+2026-06-07 20:36:24,094 - INFO - Startup
+2026-06-07 20:36:27,805 - INFO - Shutdown
+2026-06-07 20:36:28,636 - INFO - User database initialized
+2026-06-07 20:36:28,636 - INFO - Startup
+2026-06-07 20:36:30,242 - INFO - Shutdown
+2026-06-07 20:36:31,003 - INFO - User database initialized
+2026-06-07 20:36:31,003 - INFO - Startup
+2026-06-07 20:36:39,436 - INFO - Shutdown
+2026-06-07 20:36:45,277 - INFO - User database initialized
+2026-06-07 20:36:45,277 - INFO - Startup
+2026-06-07 20:37:02,831 - INFO - Shutdown
+2026-06-07 20:37:03,630 - INFO - User database initialized
+2026-06-07 20:37:03,630 - INFO - Startup
+2026-06-07 20:37:20,983 - INFO - Shutdown
+2026-06-07 20:37:21,793 - INFO - User database initialized
+2026-06-07 20:37:21,793 - INFO - Startup
+2026-06-07 20:37:42,964 - INFO - Shutdown
+2026-06-07 20:37:52,422 - INFO - User database initialized
+2026-06-07 20:37:52,422 - INFO - Startup
+2026-06-07 20:37:59,543 - INFO - Shutdown
+2026-06-07 20:38:00,329 - INFO - User database initialized
+2026-06-07 20:38:00,329 - INFO - Startup
+2026-06-07 20:38:04,441 - INFO - Shutdown
+2026-06-07 20:38:05,230 - INFO - User database initialized
+2026-06-07 20:38:05,231 - INFO - Startup
+2026-06-07 20:38:05,733 - INFO - Shutdown
+2026-06-07 20:38:06,557 - INFO - User database initialized
+2026-06-07 20:38:06,557 - INFO - Startup
+2026-06-07 20:38:08,564 - INFO - Shutdown
+2026-06-07 20:38:09,339 - INFO - User database initialized
+2026-06-07 20:38:09,340 - INFO - Startup
+2026-06-07 20:38:29,707 - INFO - Shutdown
+2026-06-07 20:38:30,488 - INFO - User database initialized
+2026-06-07 20:38:30,488 - INFO - Startup
+2026-06-07 20:38:35,307 - INFO - Shutdown
+2026-06-07 20:38:36,073 - INFO - User database initialized
+2026-06-07 20:38:36,073 - INFO - Startup
+2026-06-07 20:38:40,187 - INFO - Shutdown
+2026-06-07 20:38:42,898 - INFO - User database initialized
+2026-06-07 20:38:42,898 - INFO - Startup
+2026-06-07 20:39:15,200 - INFO - Shutdown
+2026-06-07 20:39:16,059 - INFO - User database initialized
+2026-06-07 20:39:16,059 - INFO - Startup
+2026-06-07 20:39:17,264 - INFO - Shutdown
+2026-06-07 20:39:18,053 - INFO - User database initialized
+2026-06-07 20:39:18,053 - INFO - Startup
+2026-06-07 20:39:27,282 - INFO - Shutdown
+2026-06-07 20:39:28,141 - INFO - User database initialized
+2026-06-07 20:39:28,141 - INFO - Startup
+2026-06-07 20:39:29,346 - INFO - Shutdown
+2026-06-07 20:39:30,210 - INFO - User database initialized
+2026-06-07 20:39:30,210 - INFO - Startup
+2026-06-07 20:39:39,339 - INFO - Shutdown
+2026-06-07 20:39:40,115 - INFO - User database initialized
+2026-06-07 20:39:40,115 - INFO - Startup
+2026-06-07 20:39:47,039 - INFO - Shutdown
+2026-06-07 20:39:47,812 - INFO - User database initialized
+2026-06-07 20:39:47,812 - INFO - Startup
+2026-06-07 20:39:49,919 - INFO - Shutdown
+2026-06-07 20:40:14,516 - INFO - User database initialized
+2026-06-07 20:40:14,516 - INFO - Startup
+2026-06-07 20:40:18,529 - INFO - Shutdown
+2026-06-07 20:40:19,292 - INFO - User database initialized
+2026-06-07 20:40:19,292 - INFO - Startup
+2026-06-07 20:40:19,794 - INFO - Shutdown
+2026-06-07 20:40:27,281 - INFO - User database initialized
+2026-06-07 20:40:27,281 - INFO - Startup
+2026-06-07 20:40:30,492 - INFO - Shutdown
+2026-06-07 20:40:34,398 - INFO - User database initialized
+2026-06-07 20:40:34,399 - INFO - Startup
+2026-06-07 20:40:38,511 - INFO - Shutdown
+2026-06-07 20:40:39,373 - INFO - User database initialized
+2026-06-07 20:40:39,373 - INFO - Startup
+2026-06-07 20:41:15,983 - INFO - Shutdown
+2026-06-07 20:41:18,729 - INFO - User database initialized
+2026-06-07 20:41:18,729 - INFO - Startup
+2026-06-07 20:41:25,151 - INFO - Shutdown
+2026-06-07 20:41:25,916 - INFO - User database initialized
+2026-06-07 20:41:25,916 - INFO - Startup
+2026-06-07 20:41:28,326 - INFO - Shutdown
+2026-06-07 20:41:29,194 - INFO - User database initialized
+2026-06-07 20:41:29,194 - INFO - Startup
+2026-06-07 20:41:30,399 - INFO - Shutdown
+2026-06-07 20:41:31,237 - INFO - User database initialized
+2026-06-07 20:41:31,237 - INFO - Startup
+2026-06-07 20:41:32,442 - INFO - Shutdown
+2026-06-07 20:41:33,261 - INFO - User database initialized
+2026-06-07 20:41:33,262 - INFO - Startup
+2026-06-07 20:41:34,567 - INFO - Shutdown
+2026-06-07 20:41:35,402 - INFO - User database initialized
+2026-06-07 20:41:35,402 - INFO - Startup
+2026-06-07 20:41:39,418 - INFO - Shutdown
+2026-06-07 20:41:40,247 - INFO - User database initialized
+2026-06-07 20:41:40,247 - INFO - Startup
+2026-06-07 20:41:41,051 - INFO - Shutdown
+2026-06-07 20:41:41,832 - INFO - User database initialized
+2026-06-07 20:41:41,832 - INFO - Startup
+2026-06-07 20:41:45,544 - INFO - Shutdown
+2026-06-07 20:41:46,322 - INFO - User database initialized
+2026-06-07 20:41:46,322 - INFO - Startup
+2026-06-07 20:41:55,855 - INFO - Shutdown
+2026-06-07 20:41:56,699 - INFO - User database initialized
+2026-06-07 20:41:56,699 - INFO - Startup
+2026-06-07 20:41:57,503 - INFO - Shutdown
+2026-06-07 20:41:58,413 - INFO - User database initialized
+2026-06-07 20:41:58,413 - INFO - Startup
+2026-06-07 20:41:59,618 - INFO - Shutdown
+2026-06-07 20:42:00,402 - INFO - User database initialized
+2026-06-07 20:42:00,402 - INFO - Startup
+2026-06-07 20:42:04,515 - INFO - Shutdown
+2026-06-07 20:42:05,363 - INFO - User database initialized
+2026-06-07 20:42:05,363 - INFO - Startup
+2026-06-07 20:42:08,173 - INFO - Shutdown
+2026-06-07 20:42:08,966 - INFO - User database initialized
+2026-06-07 20:42:08,967 - INFO - Startup
+2026-06-07 20:42:09,470 - INFO - Shutdown
+2026-06-07 20:42:10,338 - INFO - User database initialized
+2026-06-07 20:42:10,338 - INFO - Startup
+2026-06-07 20:42:11,543 - INFO - Shutdown
+2026-06-07 20:42:12,351 - INFO - User database initialized
+2026-06-07 20:42:12,351 - INFO - Startup
+2026-06-07 20:43:37,897 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:43:37,897 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:44:16,284 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:44:16,284 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:45:18,443 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:45:18,443 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:45:22,612 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:45:22,612 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:45:31,990 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:45:31,991 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:46:57,237 - INFO - Shutdown
+2026-06-07 20:47:03,821 - INFO - User database initialized
+2026-06-07 20:47:03,821 - INFO - Startup
+2026-06-07 20:47:12,950 - INFO - Shutdown
+2026-06-07 20:47:13,710 - INFO - User database initialized
+2026-06-07 20:47:13,711 - INFO - Startup
+2026-06-07 20:47:29,834 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgwOTI5NjkxfQ.OtBsnXooQJyne1C0t-25IsSrkHWE6g_fpFhhZ9K064Q
+2026-06-07 20:47:29,834 - INFO - get_current_user user_email=test@gmail.com
+2026-06-07 20:49:01,852 - INFO - Shutdown
+2026-06-08 21:39:45,781 - INFO - User database initialized
+2026-06-08 21:39:45,781 - INFO - Startup
+2026-06-08 21:41:35,101 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNDc0fQ.LqVHAXmN1xSEtwkD1pi3XI93adE5Q2XNjgbR8yWdI_0
+2026-06-08 21:41:35,101 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:11,709 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:11,709 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:11,712 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:11,713 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:11,715 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:11,715 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:11,717 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:11,717 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:16,868 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:16,869 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:16,901 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:16,901 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:21,615 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:21,615 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:25,026 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:25,026 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:25,028 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:25,029 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:25,032 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:25,032 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:25,049 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:25,050 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:27,489 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:27,489 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:45:27,491 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNzExfQ.RVW8Irvrcyszj3iA1e48BkQiD86VoJdQ7cua_LvLicw
+2026-06-08 21:45:27,492 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:49:03,314 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNDc0fQ.LqVHAXmN1xSEtwkD1pi3XI93adE5Q2XNjgbR8yWdI_0
+2026-06-08 21:49:03,314 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:49:08,202 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNDc0fQ.LqVHAXmN1xSEtwkD1pi3XI93adE5Q2XNjgbR8yWdI_0
+2026-06-08 21:49:08,202 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:49:08,218 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNDc0fQ.LqVHAXmN1xSEtwkD1pi3XI93adE5Q2XNjgbR8yWdI_0
+2026-06-08 21:49:08,219 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:49:08,238 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNDc0fQ.LqVHAXmN1xSEtwkD1pi3XI93adE5Q2XNjgbR8yWdI_0
+2026-06-08 21:49:08,239 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:49:08,258 - INFO - get_current_user token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzgxMDIxNDc0fQ.LqVHAXmN1xSEtwkD1pi3XI93adE5Q2XNjgbR8yWdI_0
+2026-06-08 21:49:08,259 - INFO - get_current_user user_email=test@gmail.com
+2026-06-08 21:50:30,112 - INFO - Shutdown

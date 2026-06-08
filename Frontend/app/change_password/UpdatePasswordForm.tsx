@@ -42,7 +42,7 @@ export default function UpdatePasswordForm() {
             setConfirmPassword("");
             setNewPassword({new_password:""})
             setSuccess("USER UPDATED")
-            router.push("/home")
+            router.push("/dashboard")
         })
         
     }

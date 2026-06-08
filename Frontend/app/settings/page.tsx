@@ -1,6 +1,6 @@
 "use client"
 import { useRouter } from "next/navigation"
-import ToggleThemeButton from "../components/ToggleThemeButton";
+import ToggleThemeButton from "../components/Navbar/ToggleThemeButton";
 import UpdateAccountButton from "./UpdateAccoutButton";
 export default function SettingsPage() {
     const router = useRouter()

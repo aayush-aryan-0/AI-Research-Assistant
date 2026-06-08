@@ -69,14 +69,18 @@ class DocumentType(BaseModel):
      id:uuid.UUID
      filename:str
      model_config = ConfigDict(from_attributes=True) 
-
-class ChatHistory(BaseModel):
-    document_id:uuid.UUID
+class Chat(BaseModel):
     message:str
     role:Role
+
+class ChatHistory(Chat):
+    document_id:uuid.UUID
     timestamp:datetime
 
     model_config=ConfigDict(from_attributes=True)
+
+
+
 
 
 class SummeryType(BaseModel):

@@ -1,4 +1,4 @@
-import ToggleThemeButton from "../components/ToggleThemeButton"
+import ToggleThemeButton from "../components/Navbar/ToggleThemeButton"
 
 export default function NavNon() {
     return (

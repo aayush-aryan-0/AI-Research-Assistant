@@ -24,7 +24,7 @@ class __Chat_history(Base):
 
     id:Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True,default=uuid.uuid4)
     user_id:Mapped[uuid.UUID] =  mapped_column(UUID,ForeignKey("users.id", ondelete="CASCADE"),nullable=False)
-    document_id:Mapped[uuid.UUID] =  mapped_column(UUID,ForeignKey("documents.id"),nullable=False)
+    chats_id:Mapped[uuid.UUID] =  mapped_column(UUID,ForeignKey("chats.id"),nullable=False)
     message:Mapped[str] =  mapped_column(Text,nullable=False)
     role:Mapped[Role] =  mapped_column(SQLEnum(Role), nullable=False)
     timestamp: Mapped[datetime] = mapped_column(

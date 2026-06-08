@@ -1,0 +1,6 @@
+& ChatPage.jsx
+& Dashboard.jsx
+& LoginPage.jsx
+& RegisterPage.jsx
+& UploadPage.jsx
+& WorkspacePage.jsx

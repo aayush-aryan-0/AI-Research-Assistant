@@ -10,7 +10,7 @@ import APIResponse from "@/app/types/APIResponse.types";
         success:true
       };
     }
-    catch(error:any){
+    catch(error:unknown){
       if(isAxiosError(error)){
         return {
           response:error.response?.data?.detail,
@@ -18,7 +18,7 @@ import APIResponse from "@/app/types/APIResponse.types";
         };
       }
       return {
-          response:error,
+          response:String(error),
           success:false
         };
     }

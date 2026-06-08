@@ -1,9 +1,40 @@
-from user_auth import register_user,login_user,update_user_details,delete_user_account
-from Backend.db.user import get_user,add_user,update_user,delete_user
+import httpx
 import asyncio
-async def call():
-        print("Trying to add user")
-        await register_user("testuse123r","Test User","tes123t@example.com","TestPassword123!")
-        print("User added successfully")
+import json
+OLLAMA_URL="http://localhost:11434/api/chat"
+
+async def send_prompt(prompt:str, 
+                            ):
+    payload={
+                "model": "llama3:instruct",
+                "messages": [
+                      {
+                          "role": "user", 
+                          "content": prompt
+                      }
+                  ],
+                "stream": True
+        }
+   
+    async with httpx.AsyncClient() as client:
+        async with client.stream(method="POST",url=OLLAMA_URL,json=payload) as response:
+            async for line in response.aiter_lines():
+                
+                
+                data=json.loads(line)
+                if(data["done"]):
+                    print()
+                    break
+
+                chunk=data["message"]["content"]
+                
+                print(chunk,end="",flush=True)
     
-asyncio.run(call())
+    
+   
+
+asyncio.run(send_prompt("meow"))
+
+    
+
+

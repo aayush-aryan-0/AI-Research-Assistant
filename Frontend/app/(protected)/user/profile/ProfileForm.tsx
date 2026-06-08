@@ -10,10 +10,10 @@ export default function ProfileForm(){
 
     return(
          
-                <div className="flex flex-col gap-5">
-                    <form
+     <div className="flex flex-col gap-5">
+            <form
                            className="flex flex-col gap-4 rounded-xl w-full max-w-md p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-md disabled:bg-gray-100 "
-        >
+            >
 
             <div className={fieldClass}>
                 <label htmlFor="full-name" className={labelClass}>Name</label>

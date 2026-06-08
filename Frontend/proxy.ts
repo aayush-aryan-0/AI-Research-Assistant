@@ -14,7 +14,7 @@ export function proxy(request: NextRequest) {
     const guestRoutes = ["/login", "/register","/forgot","/forgot/verify"];
 
     if (token && guestRoutes.includes(path)) {
-        return NextResponse.redirect(new URL("/home", request.url));
+        return NextResponse.redirect(new URL("/dashboard", request.url));
     }
 
     if (!token && !guestRoutes.includes(path)) {
