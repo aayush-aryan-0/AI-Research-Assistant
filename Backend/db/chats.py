@@ -1,30 +1,27 @@
-from sqlalchemy import Text,select,DateTime,func,ForeignKey,Enum as SQLEnum
+from sqlalchemy import Text,select,DateTime,func,ForeignKey,Enum as SQLEnum,or_
 from sqlalchemy.orm import Mapped,mapped_column
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
 from typing import Sequence
 from errors import ChatNotFound
 from datetime import datetime
-import enum
+
 from db.db_engine import session_local,Base
 __all__ = [
     "add_chat",
     "get_chat",
-    "get_all_chat_by_user",
-    "Role"
+    "update_chat_title",
+    "get_all_chats_by_project",
+   
 ]
 
-
-class Role(str, enum.Enum):
-    AI = "assistant"
-    USER = "user"
-# Define the User table model
+  
 class __Chats(Base):
-    __tablename__ = 'chat_history'
+    __tablename__ = 'chats'
 
     id:Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True,default=uuid.uuid4)
-    user_id:Mapped[uuid.UUID] =  mapped_column(UUID,ForeignKey("users.id", ondelete="CASCADE"),nullable=False)
-    title:Mapped[str] =  mapped_column(Text,nullable=False)
+    project_id:Mapped[uuid.UUID] =  mapped_column(UUID,ForeignKey("projects.id", ondelete="CASCADE"),nullable=False)
+    title:Mapped[str] =  mapped_column(Text,nullable=False,unique=True)
     timestamp: Mapped[datetime] = mapped_column(
         DateTime,
         server_default=func.now()
@@ -35,21 +32,23 @@ class __Chats(Base):
         return f"<document(id='{self.id}', user_id='{self.user_id},title='{self.tiele}')>"
 
 
-async def add_chat(user_id:uuid.UUID,document_id:uuid.UUID,message:str,role:Role)->None:
+async def add_chat(project_id:uuid.UUID,title:str)->__Chats:
     async with session_local() as session:
         try:
-            new_document=__Chats(user_id=user_id,document_id=document_id,message=message,role=role)
-            session.add(new_document)
+            new_chat=__Chats(project_id=project_id,title=title)
+            session.add(new_chat)
             await session.commit()
+            return new_chat
         except Exception as e:
             await session.rollback()
             raise e
 
-async def get_chats(id:uuid.UUID)->__Chats:
+async def get_chat(id:uuid.UUID|None=None,title:str|None=None)->__Chats:
+    if not id and not title:
+        raise Exception("Invalid arguments! At least one of the arguments, either id or title, must be given")
     async with session_local() as session:
         try:
-           
-            result = await session.execute(select(__Chats).where(__Chats.id==id))
+            result = await session.execute(select(__Chats).where(or_(__Chats.id==id, __Chats.title==title)))
             chat=result.scalar_one_or_none()
             if not chat:
                 raise ChatNotFound()
@@ -57,14 +56,31 @@ async def get_chats(id:uuid.UUID)->__Chats:
           
         except Exception as e:
             raise e
-        
-async def get_all_chats_by_user(user_id:uuid.UUID)->Sequence[__Chats]:
+
+async def update_chat_title(new_title:str,id:uuid.UUID|None=None,old_title:str|None=None)->None:
+    if not id and not old_title:
+        raise Exception("Invalid arguments! At least one of the arguments, either id or title, must be given")
     async with session_local() as session:
         try:
-            result = await session.execute(select(__Chats).where(__Chats.user_id==user_id))
+            result = await session.execute(select(__Chats).where(or_(__Chats.id==id, __Chats.title==old_title)))
+            chat=result.scalar_one_or_none()
+            if not chat:
+                raise ChatNotFound()
+            chat.title=new_title            
+            await session.commit()
+        except Exception as e:
+            await session.rollback()
+            raise e
+        
+async def get_all_chats_by_project(project_id:uuid.UUID)->Sequence[__Chats]:
+    async with session_local() as session:
+        try:
+            result = await session.execute(select(__Chats).where(__Chats.project_id==project_id))
             chats=result.scalars().all()
             if not chats:
                 raise ChatNotFound()
             return chats
         except Exception as e:
             raise e
+        
+        

@@ -1,68 +1,69 @@
-from fastapi import APIRouter,Depends
-from typing import Annotated,AsyncIterable
-from db.chat_history import *
+from fastapi import APIRouter,Depends,HTTPException
+from typing import Annotated
+from db.chat_messages import *
+from db.chats import *
 from jwtAuth import get_current_user
-from basemodel import User,ChatHistory
-from pydantic import BaseModel
-import json
-router=APIRouter(prefix="/chat",tags=["chat"])
-from fastapi.responses import StreamingResponse
-import httpx
+from basemodel import User,NewChat,Chat,UpdateChatTitle,Project
+from sqlalchemy.exc import IntegrityError
+from log import logger
+from errors import ChatNotFound
+from log import logger
+import uuid
+router=APIRouter(prefix="/project/{project_id}/chat",tags=["chat"])
+  
 
 
 
-
-@router.get("/",response_model=list[ChatHistory])
-async def send_history_chat(
-        current_user: Annotated[User,Depends(get_current_user)]
-)->list[ChatHistory]:
-    user_id=current_user.id
-    chat_history=await get_all_chat_by_user(user_id)
-    return chat_history
-
-
-
-
-OLLAMA_URL="http://localhost:11434/api/chat"
-
-async def ollama_stream(chats: list[ChatHistory], user_id, document_id):
-    payload = {
-        "model": "llama3:instruct",
-        "messages": [{"role": m.role, "content": m.message} for m in chats],
-        "stream": True
-    }
-    full_response = ""
-
+@router.post("/new_chat")
+async def new_chat(newChat:NewChat,project_id:uuid.UUID,current_user: Annotated[User, Depends(get_current_user)]):
     try:
-        async with httpx.AsyncClient() as client:
-            async with client.stream("POST", OLLAMA_URL, json=payload) as response:
-                async for line in response.aiter_lines():
-                    if not line:
-                        continue
-                    data = json.loads(line)
-                    if data["done"]:
-                        break
-                    chunk = data["message"]["content"]
-                    full_response += chunk
-                    yield chunk
-    finally:
-      
-        if full_response and document_id:
-            await add_chat(user_id=user_id, document_id=document_id,
-                           message=chats[-1].message, role=Role.USER)
-            await add_chat(user_id=user_id, document_id=document_id,
-                           message=full_response, role=Role.AI)
-@router.post("/prompt")
-async def send_prompt(chats:list[ChatHistory], current_user: Annotated[User, Depends(get_current_user)]):
-   return StreamingResponse(
-        ollama_stream(
-            chats, current_user.id, 
-            chats[0].document_id if chats and chats[0].document_id else None),
-        media_type="text/plain")
+        return await add_chat(project_id=project_id,title=newChat.title)
+    except IntegrityError:
+        logger.warning("Title already exists")
+        raise HTTPException(status_code=400, detail="Title already exists")
+    except Exception as e:
+        logger.error(f"Error occurred while creating new chat: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred while creating new")
+ 
 
-    
+@router.post("/get")
+async def get_chat_(chat:Chat,current_user: Annotated[User, Depends(get_current_user)]):
+    try:
+        return await get_chat(id=chat.id,title=chat.title)
+    except ChatNotFound:
+        logger.warning("Chat not found")
+        raise HTTPException(status_code=400, detail="Chat not Found")
+    except Exception as e:
+        logger.error(f"Error occurred while getting chat: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred while getting chat")
+
+@router.patch("/{chat_id}/update_title")
+async def update_title(chat_id:uuid.UUID,newTitle:UpdateChatTitle,current_user: Annotated[User, Depends(get_current_user)]):
+    try:
+        await update_chat_title(new_title=newTitle.title,id=chat_id)
+        return {"message":"Title Changed Successfully"}
+    except ChatNotFound:
+        logger.warning("Project not found")
+        raise HTTPException(status_code=400, detail="Project not Found")
+    except Exception as e:
+        logger.error(f"Error occurred while updating project title: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred while updating project title")
 
 
 
+
+@router.get("/get_all",response_model=list[Chat])
+async def get_all_chat(project_id:uuid.UUID,
+        current_user: Annotated[User,Depends(get_current_user)]
+)->list[Chat]:
+    try:
+        return await get_all_chats_by_project(project_id=project_id)
+    except ChatNotFound:
+        logger.warning("Chat Not Found")
+        raise HTTPException(status_code=400,detail="Chat Not Found")
+    except Exception as e:
+        logger.error(f"Error occurred while veiwing all chat in this project: {str(e)}")
+        raise HTTPException(status_code=500, 
+                            detail="An error occurred while veiwing all chat in this project")
 
 

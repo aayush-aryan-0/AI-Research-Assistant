@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from user_auth import startup_user_db
 from log import logger
-from routes import auth, user, documents,summaries,chat
+from routes import auth, user, documents,summaries,chat,project,chat_message
 import uvicorn
 
 @asynccontextmanager
@@ -34,6 +34,8 @@ app.include_router(user.router)
 app.include_router(documents.router)
 app.include_router(summaries.router)
 app.include_router(chat.router)
+app.include_router(project.router)
+app.include_router(chat_message.router)
 
 @app.get("/")
 async def root():

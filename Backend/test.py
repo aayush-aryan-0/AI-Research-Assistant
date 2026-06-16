@@ -33,7 +33,7 @@ async def send_prompt(prompt:str,
     
    
 
-asyncio.run(send_prompt("meow"))
+asyncio.run(send_prompt("Can you help me be a better human?"))
 
     
 

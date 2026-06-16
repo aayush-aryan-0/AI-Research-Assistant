@@ -8,7 +8,7 @@ export function proxy(request: NextRequest) {
         request.cookies.get("access_token")
     );
 
-    const token = request.cookies.get("access_token"); // ← must match your backend's cookie name exactly
+    const token = request.cookies.get("access_token"); 
     const path = request.nextUrl.pathname;
 
     const guestRoutes = ["/login", "/register","/forgot","/forgot/verify"];

@@ -6,7 +6,7 @@ from jwt.exceptions import InvalidTokenError
 
 from dotenv import load_dotenv
 import os
-from db.user import get_user
+from db.users import get_user
 from errors import UserNotFoundError,credentials_exception
 from log import logger
 load_dotenv()

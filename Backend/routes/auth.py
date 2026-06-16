@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Response, HTTPException, status,Depends
 from datetime import timedelta
 from user_auth import register_user,login_user,update_user_password
-from db.user import get_is_verified,update_is_verified
+from db.users import get_is_verified,update_is_verified
 from jwtAuth import get_current_user
 from log import logger
 from basemodel import RegisterUser,LoginUser,EmailSchema,VerifyEmail,GoogleToken,ResetPassword,User
@@ -9,7 +9,7 @@ from fastapi_mail import FastMail, MessageSchema,ConnectionConfig,MessageType
 from starlette.responses import JSONResponse
 from pydantic import SecretStr,NameEmail
 import pyotp
-from db.user import update_secret,get_secret,get_user,add_user
+from db.users import update_secret,get_secret,get_user,add_user
 import os
 from dotenv import load_dotenv
 from errors import UserNotFoundError

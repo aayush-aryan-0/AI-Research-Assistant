@@ -1,7 +1,7 @@
 from pydantic import BaseModel,EmailStr,ConfigDict
 from typing import List,Optional
 from datetime import datetime
-from db.chat_history import Role
+from role import Role
 import uuid
 
 class EmailSchema(BaseModel):
@@ -69,18 +69,15 @@ class DocumentType(BaseModel):
      id:uuid.UUID
      filename:str
      model_config = ConfigDict(from_attributes=True) 
-class Chat(BaseModel):
+
+
+class ChatMessage(BaseModel):
     message:str
     role:Role
-
-class ChatHistory(Chat):
-    document_id:uuid.UUID
+    chat_id:uuid.UUID
     timestamp:datetime
 
     model_config=ConfigDict(from_attributes=True)
-
-
-
 
 
 class SummeryType(BaseModel):
@@ -91,3 +88,37 @@ class SummeryType(BaseModel):
     created_at:datetime
 
     model_config=ConfigDict(from_attributes=True)
+
+
+class NewChat(BaseModel):
+    title:str
+  
+
+
+class NewProject(BaseModel):
+    title:str
+
+
+class Project(BaseModel):
+    id:uuid.UUID
+    user_id:uuid.UUID
+    title:str
+    timestamp:datetime
+
+    model_config=ConfigDict(from_attributes=True)
+
+class UpdateProjectTitle(BaseModel):
+    title:str
+
+class Chat(BaseModel):
+    id:uuid.UUID
+    project_id:uuid.UUID
+    title:str
+    timestamp:datetime
+
+    model_config=ConfigDict(from_attributes=True)
+
+
+class UpdateChatTitle(BaseModel):
+    title:str
+

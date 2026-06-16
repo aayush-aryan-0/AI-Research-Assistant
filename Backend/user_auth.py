@@ -1,4 +1,4 @@
-from db.user import add_user,get_user,update_user,delete_user
+from db.users import add_user,get_user,update_user,delete_user
 from db.db_engine import init_models
 from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
