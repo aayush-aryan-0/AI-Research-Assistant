@@ -107,6 +107,17 @@ class Project(BaseModel):
 
     model_config=ConfigDict(from_attributes=True)
 
+class ProjectDocumet(BaseModel):
+    id:uuid.UUID
+    project_id:uuid.UUID
+    filename:str
+    file_path:str
+    timestamp:datetime
+
+    model_config=ConfigDict(from_attributes=True)
+
+ 
+
 class UpdateProjectTitle(BaseModel):
     title:str
 

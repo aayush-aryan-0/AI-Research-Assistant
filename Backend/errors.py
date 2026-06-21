@@ -11,6 +11,8 @@ class ChatNotFound(Exception):
     pass
 class ChatMessageNotFound(Exception):
     pass
+class ChatDocumentNotFound(Exception):
+    pass
 class SummaryNotFound(Exception):
     pass
 

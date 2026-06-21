@@ -28,7 +28,7 @@ async def new_project(newProject:NewProject,current_user: Annotated[User, Depend
         raise HTTPException(status_code=500, detail="An error occurred while adding new project")
 
 @router.post("/get")
-async def get_project(projectRequest:Project,current_user: Annotated[User, Depends(get_current_user)]):
+async def get_project_(projectRequest:Project,current_user: Annotated[User, Depends(get_current_user)]):
     try:
         return await get_project(id=projectRequest.id,title=projectRequest.title)
     except ProjectNotFound:

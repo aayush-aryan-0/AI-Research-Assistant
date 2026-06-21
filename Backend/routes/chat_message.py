@@ -33,10 +33,10 @@ async def ollama_stream(chatMessages: list[ChatMessage]):
                 async for line in response.aiter_lines():
                     if not line:
                         continue
-                    data = json.loads(line)
-                    if data["done"]:
-                        break
-                    chunk = data["message"]["content"]
+                    chunk_data = json.loads(line)
+                    if chunk_data.get("done", False):
+                            break
+                    chunk = chunk_data.get("message", {}).get("content", "Not Specified")
                     full_response += chunk
                     yield chunk
     finally:
