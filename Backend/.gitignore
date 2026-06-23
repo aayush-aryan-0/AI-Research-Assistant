@@ -9,3 +9,5 @@ _pycache_/
 help.*
 test.*
 *.log
+__pycache__/
+*.py[cod]
