@@ -16,7 +16,7 @@ from errors import UserNotFoundError
 ph=PasswordHasher()
 
 __all__ = [
-    "startup_user_db",
+    "startup_db",
     "register_user",
     "login_user",
     "update_user_details",
@@ -27,7 +27,7 @@ __all__ = [
 ACCESS_TOKEN_EXPIRE_DAY = 1
 
 
-async def startup_user_db():
+async def startup_db():
     await init_models()
     logger.info("User database initialized")
 

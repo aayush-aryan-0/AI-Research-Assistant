@@ -1,5 +1,4 @@
 .env*
-test.py
 *.pdf
 *.json
 *.docx
@@ -7,3 +6,5 @@ test.py
 _pycache_/
 *.pyc
 *.bin
+help.*
+test.*

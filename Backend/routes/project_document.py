@@ -6,14 +6,14 @@ from basemodel import User,UserInDB,ProjectDocumet
 from fastapi.responses import FileResponse
 import os
 import aiofiles
-from Upload.document_extraction import document_extractor
+from rag.document_processing import document_processing
 from asyncio import to_thread
 from pathlib import Path
 from log import logger
 import uuid
 from errors import DocumentNotFoundError
 from pydantic import BaseModel
-
+from rag.embedding import emebedding
 
 router=APIRouter(prefix="/project/{project_id}/documents",tags=["project_documents"])
 
@@ -60,8 +60,15 @@ async def upload_file(
         async with aiofiles.open(path, "wb") as f:
             content = await file.read()
             await f.write(content)
-        json_path = await (document_extractor(path,current_user.id))
-        return await add_document(project_id=project_id,filename=file.filename,file_path=json_path)
+        
+        json_path,chunks = await document_processing(path,current_user.id)
+        
+        document= await add_document(project_id=project_id,filename=file.filename,file_path=json_path)
+        
+        await emebedding(chunks=chunks,document=document)
+
+        return document
+
     except Exception as e:
         logger.error(f"Error occurred while uploading document: {str(e)}")
         raise HTTPException(status_code=500, detail="An error occurred while uploading document")

@@ -15,9 +15,11 @@ class ChatDocumentNotFound(Exception):
     pass
 class SummaryNotFound(Exception):
     pass
-
 class ProjectNotFound(Exception):
     pass
+class EmbeddingNotFound(Exception):
+    pass
+
 
 credentials_exception = HTTPException(
         status_code=401,

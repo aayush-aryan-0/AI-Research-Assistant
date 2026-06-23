@@ -5,8 +5,9 @@ import uuid
 from typing import Sequence
 from errors import ChatNotFound
 from datetime import datetime
-
 from db.db_engine import session_local,Base
+from basemodel import Chat
+
 __all__ = [
     "add_chat",
     "get_chat",
@@ -29,10 +30,10 @@ class __Chats(Base):
  
     
     def __repr__(self):
-        return f"<document(id='{self.id}', user_id='{self.user_id},title='{self.tiele}')>"
+        return f"<document(id='{self.id}', project_id='{self.project_id},title='{self.title}')>"
 
 
-async def add_chat(project_id:uuid.UUID,title:str)->__Chats:
+async def add_chat(project_id:uuid.UUID,title:str)->Chat:
     async with session_local() as session:
         try:
             new_chat=__Chats(project_id=project_id,title=title)
@@ -43,7 +44,7 @@ async def add_chat(project_id:uuid.UUID,title:str)->__Chats:
             await session.rollback()
             raise e
 
-async def get_chat(id:uuid.UUID|None=None,title:str|None=None)->__Chats:
+async def get_chat(id:uuid.UUID|None=None,title:str|None=None)->Chat:
     if not id and not title:
         raise Exception("Invalid arguments! At least one of the arguments, either id or title, must be given")
     async with session_local() as session:
@@ -72,14 +73,14 @@ async def update_chat_title(new_title:str,id:uuid.UUID|None=None,old_title:str|N
             await session.rollback()
             raise e
         
-async def get_all_chats_by_project(project_id:uuid.UUID)->Sequence[__Chats]:
+async def get_all_chats_by_project(project_id:uuid.UUID)->list[Chat]:
     async with session_local() as session:
         try:
             result = await session.execute(select(__Chats).where(__Chats.project_id==project_id))
             chats=result.scalars().all()
             if not chats:
                 raise ChatNotFound()
-            return chats
+            return list(chats)
         except Exception as e:
             raise e
         

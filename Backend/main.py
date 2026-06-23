@@ -1,14 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
-from user_auth import startup_user_db
+from user_auth import startup_db
 from log import logger
-from routes import auth, user, documents,summaries,chat,project,chat_message,project_document
+from routes import auth, user,summaries,chat,project,chat_message,project_document
 import uvicorn
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await startup_user_db()
+    await startup_db()
     logger.info("Startup")
     yield
     logger.info("Shutdown")
@@ -31,7 +31,6 @@ app.add_middleware(
 
 app.include_router(auth.router)
 app.include_router(user.router)
-app.include_router(documents.router)
 app.include_router(summaries.router)
 app.include_router(chat.router)
 app.include_router(project.router)

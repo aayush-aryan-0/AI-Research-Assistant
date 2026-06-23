@@ -2,11 +2,11 @@ from sqlalchemy import Text,select,DateTime,func,ForeignKey,Enum as SQLEnum
 from sqlalchemy.orm import Mapped,mapped_column
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
-from typing import Sequence
 from datetime import datetime
 from role import Role
 from errors import ChatMessageNotFound
 from db.db_engine import session_local,Base
+from basemodel import ChatMessage
 __all__ = [
     "add_chat_message",
     "get_chat_message",
@@ -44,7 +44,7 @@ async def add_chat_message(chat_id:uuid.UUID,message:str,role:Role)->None:
             await session.rollback()
             raise e
 
-async def get_chat_message(id:uuid.UUID)->__ChatMessage:
+async def get_chat_message(id:uuid.UUID)->ChatMessage:
     async with session_local() as session:
         try:
            
@@ -57,13 +57,13 @@ async def get_chat_message(id:uuid.UUID)->__ChatMessage:
         except Exception as e:
             raise e
         
-async def get_all_chat_messages_by_chat_id(chat_id:uuid.UUID)->Sequence[__ChatMessage]:
+async def get_all_chat_messages_by_chat_id(chat_id:uuid.UUID)->list[ChatMessage]:
     async with session_local() as session:
         try:
             result = await session.execute(select(__ChatMessage).where(__ChatMessage.chat_id==chat_id))
             chats=result.scalars().all()
             if not chats:
                 raise ChatMessageNotFound()
-            return chats
+            return list(chats)
         except Exception as e:
             raise e

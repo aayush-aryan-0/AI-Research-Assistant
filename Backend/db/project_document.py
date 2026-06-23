@@ -5,6 +5,7 @@ import uuid
 from typing import Sequence
 from errors import DocumentNotFoundError
 from datetime import datetime
+from basemodel import ProjectDocumet
 from db.db_engine import session_local,Base
 __all__ = [
  
@@ -15,7 +16,6 @@ __all__ = [
 ]
 
 
-# Define the documents table model
 class __Documents(Base):
     __tablename__ = 'project_documents'
 
@@ -35,7 +35,7 @@ class __Documents(Base):
         userid='{self.user_id}'
         ,filename='{self.filename}')>"""
 
-async def add_document(project_id:uuid.UUID,filename:str,file_path:str)->__Documents:
+async def add_document(project_id:uuid.UUID,filename:str,file_path:str)->ProjectDocumet:
     async with session_local() as session:
         try:
             new_document=__Documents(project_id=project_id,filename=filename,file_path=file_path)
@@ -58,7 +58,7 @@ async def delete_document(id: uuid.UUID) -> None:
         except Exception as e:
             await session.rollback()
             raise e
-async def get_document_by_id(id:uuid.UUID)->__Documents:
+async def get_document_by_id(id:uuid.UUID)->ProjectDocumet:
     async with session_local() as session:
         try:
            
@@ -71,13 +71,13 @@ async def get_document_by_id(id:uuid.UUID)->__Documents:
         except Exception as e:
             raise e
         
-async def get_document_by_project_id(project_id:uuid.UUID)->Sequence[__Documents]:
+async def get_document_by_project_id(project_id:uuid.UUID)->list[ProjectDocumet]:
     async with session_local() as session:
         try:
             result = await session.execute(select(__Documents).where(__Documents.project_id==project_id))
             documents=result.scalars().all()
             if not documents:
                 raise DocumentNotFoundError()
-            return documents
+            return list(documents)
         except Exception as e:
             raise e
