@@ -3,7 +3,6 @@ from sqlalchemy.orm import Mapped,mapped_column
 from sqlalchemy.dialects.postgresql import UUID
 from pgvector.sqlalchemy import VECTOR
 import uuid
-from typing import Sequence
 from errors import EmbeddingNotFound
 from db.db_engine import session_local,Base
 
@@ -97,17 +96,21 @@ async def get_chunk(document_id:uuid.UUID,target,limit:int)->list[RowMapping]:
 
     async with session_local() as session:
         try:
-            chunks=await session.execute(
+            similarity = (1 - __ProjectDocumentEmbeddings.vector.cosine_distance(target)).label("similarity")
+            #threshold_similarity=0.2
+            chunks = await session.execute(
             select(
-                __ProjectDocumentEmbeddings.chunk,
-                __ProjectDocumentEmbeddings.vector.cosine_distance(target).label("similarity"),
-                
-            )
-            .where(__ProjectDocumentEmbeddings.document_id == document_id)
-            .order_by("similarity")
-            .limit(limit)
-            )
-         
+                    __ProjectDocumentEmbeddings.chunk,
+                    similarity
+                )
+                .where(
+                    __ProjectDocumentEmbeddings.
+                    document_id == document_id
+                    )
+                #.where(similarity >= threshold_similarity)
+                .order_by(similarity.desc())
+                .limit(limit)
+            )            
             return list(chunks.mappings().all())
         except Exception as e:
             raise e

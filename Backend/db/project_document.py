@@ -32,8 +32,9 @@ class __Documents(Base):
     
     def __repr__(self):
         return f"""<document(id='{self.id}', 
-        userid='{self.user_id}'
-        ,filename='{self.filename}')>"""
+        project_id='{self.project_id}'
+        ,filename='{self.filename}')>
+        file_path='{self.file_path}')>"""
 
 async def add_document(project_id:uuid.UUID,filename:str,file_path:str)->ProjectDocumet:
     async with session_local() as session:

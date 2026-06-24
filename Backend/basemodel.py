@@ -72,13 +72,14 @@ class DocumentType(BaseModel):
 
 
 class ChatMessage(BaseModel):
-    id:uuid.UUID
     chat_id:uuid.UUID
     message:str
     role:Role
     timestamp:datetime
 
     model_config=ConfigDict(from_attributes=True)
+
+
 
 
 class SummeryType(BaseModel):
