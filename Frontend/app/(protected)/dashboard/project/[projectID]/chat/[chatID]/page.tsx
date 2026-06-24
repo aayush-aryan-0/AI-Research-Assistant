@@ -8,8 +8,8 @@ import api from "@/app/lib/api/api"
 import { useRouter } from "next/navigation"
 type ChatMessage = {
   message: string,
-  role: string,
   chat_id: ParamValue,
+  role: string,
   timestamp: string
 }
 
@@ -34,7 +34,7 @@ export default function ChatPage() {
     loadHistory()
   }, [chatID, projectID])
 
-  async function handleStream(newMessages: Array<ChatMessage>) {
+  async function handleStream(newMessages: ChatMessage) {
     setTransition(async () => {
       const response = await fetch(
         `http://localhost:8000/project/${projectID}/chat/${chatID}/message/prompt`,
@@ -46,7 +46,13 @@ export default function ChatPage() {
         }
       )
 
-      if (!response.ok) throw new Error("Request failed")
+      if (!response.ok){ 
+        
+        console.log(response)
+        
+        throw new Error("Request failed")
+
+      }
 
       const reader = response.body!.getReader()
       const decoder = new TextDecoder()
@@ -87,7 +93,7 @@ export default function ChatPage() {
       ]
       setChatMessages(newMessages)
       setInput("")
-      await handleStream(newMessages)
+      await handleStream(newMessages[newMessages.length-1])
     } catch (error: unknown) {
       setError(String(error))
     }
