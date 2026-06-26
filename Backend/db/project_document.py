@@ -2,7 +2,6 @@ from sqlalchemy import Text,select,DateTime,func,ForeignKey
 from sqlalchemy.orm import Mapped,mapped_column
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
-from typing import Sequence
 from errors import DocumentNotFoundError
 from datetime import datetime
 from basemodel import ProjectDocumet

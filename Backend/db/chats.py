@@ -1,8 +1,7 @@
-from sqlalchemy import Text,select,DateTime,func,ForeignKey,Enum as SQLEnum,or_
+from sqlalchemy import Text,select,DateTime,func,ForeignKey
 from sqlalchemy.orm import Mapped,mapped_column
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
-from typing import Sequence
 from errors import ChatNotFound
 from datetime import datetime
 from db.db_engine import session_local,Base
@@ -22,7 +21,7 @@ class __Chats(Base):
 
     id:Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True,default=uuid.uuid4)
     project_id:Mapped[uuid.UUID] =  mapped_column(UUID,ForeignKey("projects.id", ondelete="CASCADE"),nullable=False)
-    title:Mapped[str] =  mapped_column(Text,nullable=False,unique=True)
+    title:Mapped[str] =  mapped_column(Text,nullable=False)
     timestamp: Mapped[datetime] = mapped_column(
         DateTime,
         server_default=func.now()
@@ -44,12 +43,10 @@ async def add_chat(project_id:uuid.UUID,title:str)->Chat:
             await session.rollback()
             raise e
 
-async def get_chat(id:uuid.UUID|None=None,title:str|None=None)->Chat:
-    if not id and not title:
-        raise Exception("Invalid arguments! At least one of the arguments, either id or title, must be given")
+async def get_chat(id:uuid.UUID)->Chat:
     async with session_local() as session:
         try:
-            result = await session.execute(select(__Chats).where(or_(__Chats.id==id, __Chats.title==title)))
+            result = await session.execute(select(__Chats).where(__Chats.id==id))
             chat=result.scalar_one_or_none()
             if not chat:
                 raise ChatNotFound()
@@ -58,12 +55,10 @@ async def get_chat(id:uuid.UUID|None=None,title:str|None=None)->Chat:
         except Exception as e:
             raise e
 
-async def update_chat_title(new_title:str,id:uuid.UUID|None=None,old_title:str|None=None)->None:
-    if not id and not old_title:
-        raise Exception("Invalid arguments! At least one of the arguments, either id or title, must be given")
+async def update_chat_title(new_title:str,id:uuid.UUID)->None:
     async with session_local() as session:
         try:
-            result = await session.execute(select(__Chats).where(or_(__Chats.id==id, __Chats.title==old_title)))
+            result = await session.execute(select(__Chats).where(__Chats.id==id))
             chat=result.scalar_one_or_none()
             if not chat:
                 raise ChatNotFound()

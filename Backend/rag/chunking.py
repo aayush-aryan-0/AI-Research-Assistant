@@ -1,4 +1,5 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+
 def chunking(text:str)->list[str]:
     splitter = RecursiveCharacterTextSplitter( 
            chunk_size=5000,

@@ -29,7 +29,7 @@ async def new_chat(newChat:NewChat,project_id:uuid.UUID,current_user: Annotated[
 @router.post("/get")
 async def get_chat_(chat:Chat,current_user: Annotated[User, Depends(get_current_user)]):
     try:
-        return await get_chat(id=chat.id,title=chat.title)
+        return await get_chat(id=chat.id)
     except ChatNotFound:
         logger.warning("Chat not found")
         raise HTTPException(status_code=400, detail="Chat not Found")

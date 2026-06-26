@@ -1,17 +1,15 @@
 from sqlalchemy import Text,select,ForeignKey,RowMapping
 from sqlalchemy.orm import Mapped,mapped_column
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.dialects.postgresql import UUID,JSONB
 from pgvector.sqlalchemy import VECTOR
 import uuid
-from errors import EmbeddingNotFound
 from db.db_engine import session_local,Base
-
+from basemodel import Context
 __all__ = [
  
     "add_embedding",
-    "get_embedding_by_document_id",
-    "get_embedding_by_id",
-    "delete_embedding"
+    "get_chunk",
+
 ]
 
 class __ProjectDocumentEmbeddings(Base):
@@ -22,6 +20,14 @@ class __ProjectDocumentEmbeddings(Base):
                                 primary_key=True,
                                 default=uuid.uuid4
                             )
+    project_id:Mapped[uuid.UUID] = mapped_column(
+                                        UUID(as_uuid=True),
+                                        ForeignKey(
+                                            "projects.id", 
+                                            ondelete="CASCADE"
+                                        ),
+                                        nullable=False
+                                    )
     document_id:Mapped[uuid.UUID] = mapped_column(
                                         UUID(as_uuid=True),
                                         ForeignKey(
@@ -30,9 +36,10 @@ class __ProjectDocumentEmbeddings(Base):
                                         ),
                                         nullable=False
                                     )
+    chunk_metadata:Mapped[dict]=mapped_column(JSONB,nullable=False)
     chunk:Mapped[str] = mapped_column(Text, nullable=False)
 
-    vector = mapped_column(VECTOR, nullable=False)
+    vector = mapped_column(VECTOR(384), nullable=False)
     
    
     def __repr__(self):
@@ -43,12 +50,17 @@ class __ProjectDocumentEmbeddings(Base):
         >"""
 
 async def add_embedding(
-        document_id:uuid.UUID,chunk:str,vector)->__ProjectDocumentEmbeddings:
+        project_id:uuid.UUID,
+        document_id:uuid.UUID,
+        chunk_metadata:dict,
+        chunk:str,vector)->__ProjectDocumentEmbeddings:
     
     async with session_local() as session:
         try:
             new_embedding=__ProjectDocumentEmbeddings(
+                project_id=project_id,
                 document_id=document_id,
+                chunk_metadata=chunk_metadata,
                 chunk=chunk,
                 vector=vector
                 )
@@ -59,93 +71,43 @@ async def add_embedding(
             await session.rollback()
             raise e
 
-async def delete_embedding(id: uuid.UUID) -> None:
 
+
+async def get_chunk(
+        target,
+        limit:int,
+        project_id:uuid.UUID|None=None,
+        document_id:uuid.UUID|None=None,
+       )->list[Context]:
+    
+    if not project_id and not document_id:
+        raise Exception("Invalid arguments! Give project_id or document_id! Both cannot be none!")
+  
     async with session_local() as session:
         try:
-            result = await session.execute(
-                select(__ProjectDocumentEmbeddings)
-                .where(__ProjectDocumentEmbeddings.id == id))
-            embeddings = result.scalar_one_or_none()
-            if embeddings is None:
-                raise EmbeddingNotFound()
-            await session.delete(embeddings)
-            await session.commit()
-        except Exception as e:
-            await session.rollback()
-            raise e
-        
-async def get_embedding_by_id(
-        id:uuid.UUID)->__ProjectDocumentEmbeddings:
 
-    async with session_local() as session:
-        try:
-           
-            result = await session.execute(
-                select(__ProjectDocumentEmbeddings).
-                where(__ProjectDocumentEmbeddings.id==id))
-            embeddings=result.scalar_one_or_none()
-            if not embeddings:
-                raise EmbeddingNotFound()
-            return embeddings
-          
-        except Exception as e:
-            raise e
+            if project_id:
+                conditon=__ProjectDocumentEmbeddings.project_id == project_id
+            else:
+                conditon=__ProjectDocumentEmbeddings.document_id == document_id
 
-async def get_chunk(document_id:uuid.UUID,target,limit:int)->list[RowMapping]:
 
-    async with session_local() as session:
-        try:
-            similarity = (1 - __ProjectDocumentEmbeddings.vector.cosine_distance(target)).label("similarity")
+            similarity = (1 - __ProjectDocumentEmbeddings.
+                          vector.cosine_distance(target)).label("similarity")
             #threshold_similarity=0.2
             chunks = await session.execute(
             select(
                     __ProjectDocumentEmbeddings.chunk,
+                    __ProjectDocumentEmbeddings.chunk_metadata,
                     similarity
                 )
-                .where(
-                    __ProjectDocumentEmbeddings.
-                    document_id == document_id
-                    )
+                .where(conditon)
                 #.where(similarity >= threshold_similarity)
                 .order_by(similarity.desc())
                 .limit(limit)
             )            
-            return list(chunks.mappings().all())
+            return [Context.model_validate(dict(row)) for row in chunks.mappings().all()]
         except Exception as e:
             raise e
 
-   
 
-async def get_embeedding_by_id(
-        id:uuid.UUID)->__ProjectDocumentEmbeddings:
-
-    async with session_local() as session:
-        try:
-           
-            result = await session.execute(
-                select(__ProjectDocumentEmbeddings).
-                where(__ProjectDocumentEmbeddings.id==id))
-            embeddings=result.scalar_one_or_none()
-            if not embeddings:
-                raise EmbeddingNotFound()
-            return embeddings
-          
-        except Exception as e:
-            raise e
-        
-async def get_embedding_by_document_id(
-        document_id:uuid.UUID)->list[__ProjectDocumentEmbeddings]:
-    
-    async with session_local() as session:
-        try:
-            result = await session.execute(
-                select(__ProjectDocumentEmbeddings).
-                where(__ProjectDocumentEmbeddings.
-                document_id==document_id))
-            embeddings=list(result.scalars().all())
-            if not embeddings:
-                raise EmbeddingNotFound()
-            return embeddings
-        except Exception as e:
-            raise e

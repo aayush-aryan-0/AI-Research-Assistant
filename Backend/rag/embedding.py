@@ -1,9 +1,8 @@
 from sentence_transformers import SentenceTransformer
+import uuid
 from db.embeddings import add_embedding
-from basemodel import ProjectDocumet
 
-
-async def emebedding(chunks:list[str],document:ProjectDocumet):
+async def emebedding(project_id:uuid.UUID,document_id:uuid.UUID,chunk_metadata:dict,chunks:list[str]):
     
     model = SentenceTransformer(
         "all-MiniLM-L6-v2"
@@ -12,7 +11,9 @@ async def emebedding(chunks:list[str],document:ProjectDocumet):
     for chunk in chunks:
         vector = model.encode(chunk).tolist()
         await add_embedding(
-            document_id=document.id,
+            project_id=project_id,
+            document_id=document_id,
+            chunk_metadata=chunk_metadata,
             chunk=chunk,
             vector=vector
         )

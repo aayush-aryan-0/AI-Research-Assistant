@@ -6,12 +6,21 @@ import { useParams } from "next/navigation"
 import { ParamValue } from "next/dist/server/request/params"
 import api from "@/app/lib/api/api"
 import { useRouter } from "next/navigation"
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import 'katex/dist/katex.min.css'
+import useChat from "@/app/(protected)/lib/hooks/useChat"
+import Error from "@/app/(protected)/lib/components/Error"
+
 type ChatMessage = {
   message: string,
   chat_id: ParamValue,
   role: string,
   timestamp: string
 }
+
 
 export default function ChatPage() {
   const router=useRouter()
@@ -21,7 +30,7 @@ export default function ChatPage() {
   const [error, setError] = useState<string>("")
   const [chatMessages, setChatMessages] = useState<Array<ChatMessage>>([])
   const { projectID, chatID } = useParams()
-
+  const {chat}=useChat()
   useEffect(() => {
     async function loadHistory() {
       try {
@@ -50,7 +59,7 @@ export default function ChatPage() {
         
         console.log(response)
         
-        throw new Error("Request failed")
+        setError("Request failed")
 
       }
 
@@ -104,15 +113,11 @@ export default function ChatPage() {
 
       {/* Header */}
       <div className="shrink-0 px-6 py-4 border-b border-zinc-200 dark:border-zinc-800 font-semibold text-lg">
-        Chat
+        Chat: {chat.title}
       </div>
 
       {/* Error */}
-      {error && (
-        <div className="shrink-0 mx-6 mt-3 bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900 rounded-lg px-4 py-2 text-sm">
-          {error}
-        </div>
-      )}
+      <Error error={error}/>
 
       {/* Messages */}
       <div className="flex-1 overflow-y-auto px-6 py-4">
@@ -129,7 +134,13 @@ export default function ChatPage() {
                     ? "bg-green-500 text-white rounded-br-sm"
                     : "bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-bl-sm"
                 }`}>
-                  {msg.message}
+                  <ReactMarkdown  
+                  remarkPlugins={[remarkGfm, remarkMath]}
+                  rehypePlugins={[rehypeKatex]}
+                  >
+                        {msg.message}
+                  </ReactMarkdown>
+                 
                 </div>
                 <span className="text-xs text-zinc-400 dark:text-zinc-600 px-1">
                   {new Date(msg.timestamp).toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" })}
@@ -142,7 +153,12 @@ export default function ChatPage() {
           {output && (
             <li className="self-start items-start flex flex-col gap-1 max-w-[70%]">
               <div className="px-4 py-2.5 rounded-2xl rounded-bl-sm text-sm leading-relaxed bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700">
-                {output}
+                <ReactMarkdown  
+                  remarkPlugins={[remarkGfm, remarkMath]}
+                  rehypePlugins={[rehypeKatex]}
+                  >
+                        {output}
+                </ReactMarkdown>
                 <span className="inline-block w-1.5 h-3.5 ml-0.5 bg-zinc-400 dark:bg-zinc-500 animate-pulse rounded-sm" />
               </div>
             </li>

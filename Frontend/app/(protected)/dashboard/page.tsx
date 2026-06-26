@@ -6,13 +6,8 @@ import { useTransition } from "react"
 import { useRouter } from "next/navigation";
 import api from "@/app/lib/api/api"
 import { isAxiosError } from "axios";
-
-type Project = {
-  id: string,
-  user_id: string,
-  title: string,
-  timestamp: string
-}
+import Project from "@/app/(protected)/lib/type/Project.type";
+import useProject from "../lib/hooks/useProject";
 type NewProject = {
   title: string
 }
@@ -23,7 +18,7 @@ export default function DashboardPage() {
   const [error, setError] = useState<string>("")
   const [projects, setProjects] = useState<Array<Project>>([])
   const [newProjectRequest, setNewProjectRequest] = useState<NewProject>({ title: "" })
-
+  const {setProject}=useProject()
   useEffect(() => {
     async function loadHistory() {
       try {
@@ -41,6 +36,7 @@ export default function DashboardPage() {
     setTransition(async () => {
       try {
         const result = await api.post(`/project/new`, newProjectRequest)
+        setProject(result.data)
         router.push(`dashboard/project/${result.data.id}`)
       } catch (error: unknown) {
         if (isAxiosError(error))
@@ -129,7 +125,9 @@ export default function DashboardPage() {
               {projects.map((project) => (
                 <li key={project.id}>
                   <button
-                    onClick={() => router.push(`/dashboard/project/${project.id}`)}
+                    onClick={() =>{ 
+                      setProject(project)
+                      router.push(`/dashboard/project/${project.id}`)}}
                     className="
                       w-full flex items-center justify-between
                       px-4 py-3.5

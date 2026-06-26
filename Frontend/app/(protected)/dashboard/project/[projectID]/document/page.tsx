@@ -4,7 +4,8 @@ import { useState, useEffect } from "react"
 import { useParams } from "next/navigation"
 import api from "@/app/lib/api/api"
 import { isAxiosError } from "axios"
-
+import ProjectTitle from "@/app/(protected)/lib/components/ProjectTitle"
+import Error from "@/app/(protected)/lib/components/Error"
 type Document = {
   id: string
   project_id: string
@@ -17,6 +18,7 @@ export default function DocumentPage() {
   const [documents, setDocuments] = useState<Array<Document>>([])
   const [error, setError] = useState<string>("")
   const { projectID } = useParams()
+ 
 
   useEffect(() => {
     async function loadDocuments() {
@@ -50,11 +52,11 @@ export default function DocumentPage() {
     <div
         className="flex flex-col gap-2 w-lvw m-4"
     >
-      {error && (
-        <div className="bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-400 border border-red-200 dark:border-red-900 rounded-lg px-4 py-3 text-sm">
-          {error}
-        </div>
-      )}
+     {/* Header */}
+    <ProjectTitle/>
+
+      <Error error={error}/>
+      
       <Upload />
       <section>
         <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-400 dark:text-zinc-600 mb-3">

@@ -1,54 +1,44 @@
 import pymupdf4llm as pmp
-import json
 import fitz
-import aiofiles
-import uuid
 import pymupdf4llm as pmp
-import json
 import fitz
-
 from rag.cleaning import clean
 from rag.chunking import chunking
+from pydantic import BaseModel
 
-async def document_processing(
-        pdf_path: str, 
-        user_id: uuid.UUID
-        )->tuple:
+
+async def document_processing(pdf_path: str)->tuple[dict,list[str]]:
     
-    unprossed_text = pmp.to_markdown(
+    unprocessed_text = pmp.to_markdown(
         pdf_path, 
         header=False, 
         footer=False
     )
 
-    if not isinstance(unprossed_text,str):
+    if not isinstance(unprocessed_text,str):
         raise Exception("unprocessed_text must is be string")
 
    
-    text:str = clean(unprossed_text) 
+    text:str = clean(unprocessed_text) 
 
-    with fitz.open(pdf_path) as doc: 
-        metadata = doc.metadata
-        if not isinstance(metadata,dict):
-            raise Exception("metadata must be a dict")
-        page_count = doc.page_count
+    with fitz.open(pdf_path) as document: 
+        unprocessed_metadata = document.metadata
+        if not isinstance(unprocessed_metadata,dict):
+            raise Exception("document.metadata is not a dictionary")
+        page_count=document.page_count
+    
+    chunk_metadata={
+        "title":unprocessed_metadata["title"],
+        "author":unprocessed_metadata["author"],
+        "subject":unprocessed_metadata["subject"],
+        "keywords":unprocessed_metadata["keywords"],
+        "page_count":page_count
+
+    }
 
     chunks:list[str] = chunking(text) 
 
-    pdf_data = {
-        "metadata": metadata,
-        "page_count": page_count,
-        "source": pdf_path,
-        "uploaded_by": str(user_id),
-        "chunks": chunks,
-    }
-
-    json_path = pdf_path.replace(".pdf", ".json")
-    async with aiofiles.open(json_path, "w") as f:
-        await f.write(json.dumps(pdf_data, ensure_ascii=False))
-
-    return json_path,chunks
-
+    return chunk_metadata,chunks
 
 
 

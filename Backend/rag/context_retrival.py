@@ -1,30 +1,29 @@
 from sentence_transformers import SentenceTransformer
 from db.embeddings import get_chunk
-from basemodel import ProjectDocumet
-from sqlalchemy import RowMapping
+import uuid
+from basemodel import Context
 
 __model = SentenceTransformer(
         "all-MiniLM-L6-v2"
     )
 async def context_retrieval(
-        document:ProjectDocumet,
+        project_id:uuid.UUID,
         query:str, 
         limit:int=3)->str:
     
     query_embedding = __model.encode(query).tolist()
-    chunks:list[RowMapping] = await get_chunk(
-        document_id=document.id,
+    chunks:list[Context] = await get_chunk(
+        project_id=project_id,
         target=query_embedding,
         limit=limit
     )
     return "\n\n".join(
     f"""
-    [Chunk {i+1} | similarity score: {row["similarity"]:.3f}]:
-
-    {row["chunk"]}
+    [Chunk {i+1} | similarity score: {row.similarity:.3f}]:
+    [Metadata {row.chunk_metadata}]
+    {row.chunk}
 
     """
-
     for i, row in enumerate(chunks)
 
     )

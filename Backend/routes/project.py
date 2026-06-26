@@ -6,7 +6,6 @@ from jwtAuth import get_current_user
 from basemodel import User,NewProject,Project,UpdateProjectTitle
 from sqlalchemy.exc import IntegrityError
 from log import logger
-from role import Role
 from errors import ProjectNotFound
 
 router=APIRouter(prefix="/project",tags=["project"])
@@ -30,7 +29,7 @@ async def new_project(newProject:NewProject,current_user: Annotated[User, Depend
 @router.post("/get")
 async def get_project_(projectRequest:Project,current_user: Annotated[User, Depends(get_current_user)]):
     try:
-        return await get_project(id=projectRequest.id,title=projectRequest.title)
+        return await get_project(id=projectRequest.id)
     except ProjectNotFound:
         logger.warning("Project not found")
         raise HTTPException(status_code=400, detail="Project not Found")
@@ -41,7 +40,7 @@ async def get_project_(projectRequest:Project,current_user: Annotated[User, Depe
 @router.patch("/update_title")
 async def update_title(projectRequest:Project,newTitle:UpdateProjectTitle,current_user: Annotated[User, Depends(get_current_user)]):
     try:
-        await update_project_title(new_title=newTitle.title,id=projectRequest.id,old_title=projectRequest.title)
+        await update_project_title(new_title=newTitle.title,id=projectRequest.id)
         return {"message":"Title Changed Successfully"}
     except ProjectNotFound:
         logger.warning("Project not found")

@@ -135,3 +135,10 @@ class Chat(BaseModel):
 class UpdateChatTitle(BaseModel):
     title:str
 
+
+class Context(BaseModel):
+    chunk:str
+    chunk_metadata:dict
+    similarity:float
+
+    model_config = ConfigDict(from_attributes=True)

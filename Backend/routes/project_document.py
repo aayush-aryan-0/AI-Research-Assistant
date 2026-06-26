@@ -2,12 +2,11 @@ from fastapi import APIRouter,Depends,HTTPException,UploadFile,File
 from db.project_document import get_document_by_project_id,get_document_by_id,add_document,delete_document
 from jwtAuth import get_current_user
 from typing import Annotated
-from basemodel import User,UserInDB,ProjectDocumet
+from basemodel import User,ProjectDocumet
 from fastapi.responses import FileResponse
 import os
 import aiofiles
 from rag.document_processing import document_processing
-from asyncio import to_thread
 from pathlib import Path
 from log import logger
 import uuid
@@ -34,7 +33,6 @@ async def view_document(
     current_user: Annotated[User,Depends(get_current_user)]
 )->FileResponse:
     document=await get_document_by_id(document_id)
-    path = document.file_path
     if not document or document.project_id != project_id:
         raise HTTPException(status_code=404, detail="Not found")
     if not os.path.exists(document.file_path):
@@ -44,8 +42,10 @@ async def view_document(
 
 @router.post("/upload")
 async def upload_file(
-    project_id:uuid.UUID,current_user:Annotated[User,Depends(get_current_user)],
+    project_id:uuid.UUID,
+    current_user:Annotated[User,Depends(get_current_user)],
     file: UploadFile = File(...))->ProjectDocumet:
+
     try:
         if not file or file.filename is None:
             raise HTTPException(status_code=400,detail="Provide file or filename")
@@ -61,11 +61,14 @@ async def upload_file(
             content = await file.read()
             await f.write(content)
         
-        json_path,chunks = await document_processing(path,current_user.id)
+        chunk_metadata,chunks = await document_processing(pdf_path=path)
         
-        document= await add_document(project_id=project_id,filename=file.filename,file_path=json_path)
+        document = await add_document(project_id=project_id,filename=file.filename,file_path=path)
         
-        await emebedding(chunks=chunks,document=document)
+        await emebedding(project_id=project_id,
+                         document_id=document.id,
+                         chunk_metadata=chunk_metadata,
+                         chunks=chunks)
 
         return document
 
