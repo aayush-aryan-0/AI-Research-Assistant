@@ -23,9 +23,11 @@ export default function Upload() {
     try {
       const formData = new FormData()
       formData.append("file", file)
-      const res = await fetch(`https://ai-research-assistant-backend-fnc7.onrender.com/project/${projectID}/documents/upload`, {
-        method: "POST", body: formData, credentials: "include",
-      })
+      const res = await fetch(`/api/backend/project/${projectID}/documents/upload`, {
+    method: "POST",
+    body: formData,
+    credentials: "include",
+})
       if (!res.ok) throw new Error("Upload failed")
       const data = await res.json()
       setDocId(data.filename)
