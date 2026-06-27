@@ -3,8 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from user_auth import startup_db
 from log import logger
-from routes import auth, user,summaries,chat,project,chat_message,project_document,welcome
+from routes import auth, user, summaries, chat, project, chat_message, project_document, welcome
 import uvicorn
+import os
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -18,7 +19,8 @@ app = FastAPI(lifespan=lifespan)
 origins = [
     "http://192.168.0.7:3000",
     "http://localhost:3000",
-    "http://10.170.128.30:3000"
+    "http://10.170.128.30:3000",
+    "https://ai-research-assistant-hxdf.onrender.com",
 ]
 
 app.add_middleware(
@@ -43,4 +45,5 @@ async def root():
     return {"message": "Connected to backend successfully!"}
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="localhost", port=8000, reload=True)
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
