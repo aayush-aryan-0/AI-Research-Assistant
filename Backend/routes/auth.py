@@ -1,39 +1,60 @@
-from fastapi import APIRouter, Response, HTTPException, status,Depends
+from fastapi import APIRouter, Response, HTTPException, status, Depends
 from datetime import timedelta
-from user_auth import register_user,login_user,update_user_password
+from user_auth import register_user, login_user, update_user_password
 from db.users import update_is_verified
 from jwtAuth import get_current_user
 from log import logger
-from basemodel import RegisterUser,LoginUser,EmailSchema,VerifyEmail,GoogleToken,ResetPassword,User
-from fastapi_mail import FastMail, MessageSchema,ConnectionConfig,MessageType
+from basemodel import RegisterUser, LoginUser, EmailSchema, VerifyEmail, GoogleToken, ResetPassword, User
+from fastapi_mail import FastMail, MessageSchema, ConnectionConfig, MessageType
 from starlette.responses import JSONResponse
-from pydantic import SecretStr,NameEmail
+from pydantic import SecretStr, NameEmail
 import pyotp
-from db.users import update_secret,get_secret,get_user,add_user
+from db.users import update_secret, get_secret, get_user, add_user
 import os
 from dotenv import load_dotenv
 from errors import UserNotFoundError
 from google_auth import verify_google_token
 from jwtAuth import create_access_token
-from smtplib import SMTPAuthenticationError,SMTPConnectError,SMTPException
+from smtplib import SMTPAuthenticationError, SMTPConnectError, SMTPException
 from typing import Annotated
-from datetime import timedelta
-router=APIRouter(tags=["auth"])
+
+router = APIRouter(tags=["auth"])
 load_dotenv()
 
 ACCESS_TOKEN_EXPIRE_DAY = 1
+IS_PROD = os.getenv("ENVIRONMENT") == "production"
 
 conf = ConnectionConfig(
     MAIL_USERNAME=os.environ["MAIL_USERNAME"],
     MAIL_PASSWORD=SecretStr(os.environ["MAIL_PASSWORD"]),
     MAIL_PORT=587,
     MAIL_SERVER="smtp.gmail.com",
-    MAIL_STARTTLS=True,       
-    MAIL_SSL_TLS=False,    
+    MAIL_STARTTLS=True,
+    MAIL_SSL_TLS=False,
     MAIL_FROM=os.environ["MAIL_FROM"],
 )
+
+def set_auth_cookie(response: Response, token: str):
+    response.set_cookie(
+        key="access_token",
+        value=token,
+        httponly=True,
+        secure=IS_PROD,
+        samesite="none" if IS_PROD else "lax",
+        max_age=86400
+    )
+
+def delete_auth_cookie(response: Response):
+    response.delete_cookie(
+        key="access_token",
+        httponly=True,
+        secure=IS_PROD,
+        samesite="none" if IS_PROD else "lax",
+    )
+
+
 @router.post("/register")
-async def register(user:RegisterUser):
+async def register(user: RegisterUser):
     return await register_user(
         username=user.username,
         full_name=user.full_name,
@@ -41,48 +62,34 @@ async def register(user:RegisterUser):
         password=user.password
     )
 
+
 @router.post("/login")
-async def login(user:LoginUser,response:Response):
+async def login(user: LoginUser, response: Response):
     token = await login_user(
         username=user.username,
         password=user.password
     )
     if token is None:
         raise HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Could not validate credentials",
-        headers={"WWW-Authenticate": "Bearer"},
-    )
-
-    response.set_cookie(
-        key="access_token",
-        value=token.access_token,
-        httponly=True,
-        samesite="lax",
-        secure=False,       
-        max_age=3600
-    )
-
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Could not validate credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    set_auth_cookie(response, token.access_token)
     return {"message": "Login successful"}
+
 
 @router.post("/logout")
 async def logout(response: Response):
-
-    response.delete_cookie(
-        key="access_token",
-        httponly=True,
-        secure=False, 
-        samesite="lax",
-    )
-
-    return {"message":"Logged out"}
+    delete_auth_cookie(response)
+    return {"message": "Logged out"}
 
 
 @router.post("/send_mail")
-async def send_mail(email:EmailSchema ):
+async def send_mail(email: EmailSchema):
     try:
         secret = pyotp.random_base32()
-        await update_secret(email=str(email.email),secret=secret)
+        await update_secret(email=str(email.email), secret=secret)
         time_window = 60 * 5
         totp = pyotp.TOTP(s=secret, interval=time_window)
         otp = totp.now()
@@ -103,7 +110,7 @@ async def send_mail(email:EmailSchema ):
             recipients=[NameEmail(name=str(email.email), email=str(email.email))],
             body=html,
             subtype=MessageType.html
-            )
+        )
 
         fm = FastMail(conf)
         await fm.send_message(message)
@@ -111,7 +118,7 @@ async def send_mail(email:EmailSchema ):
 
         return JSONResponse(status_code=200, content={"message": "email has been sent"})
     except UserNotFoundError:
-        raise HTTPException(status_code=404,detail="User not found")
+        raise HTTPException(status_code=404, detail="User not found")
     except (SMTPConnectError, ConnectionRefusedError, TimeoutError) as e:
         logger.error(f"Mail server unreachable: {e}")
         raise HTTPException(status_code=503, detail="Could not connect to email server. Try again later.")
@@ -128,83 +135,75 @@ async def send_mail(email:EmailSchema ):
 
 @router.post("/verify_mail")
 async def verify_mail(verifyEmail: VerifyEmail, response: Response):
-    
     try:
         secret = await get_secret(str(verifyEmail.email))
     except Exception:
         raise HTTPException(status_code=500, detail="Internal error fetching secret")
-    
+
     if not secret:
         raise HTTPException(status_code=404, detail="Email not found")
-    
+
     time_window = 60 * 5
     totp = pyotp.TOTP(s=secret, interval=time_window)
-    
+
     if not totp.verify(verifyEmail.otp):
         raise HTTPException(status_code=400, detail="Invalid or expired OTP")
-    
+
     try:
         user = await get_user(email=str(verifyEmail.email))
     except UserNotFoundError:
         raise HTTPException(status_code=404, detail="User not found")
-    
+
     access_token_expires = timedelta(days=ACCESS_TOKEN_EXPIRE_DAY)
     access_token = create_access_token(
         {"email": user.email},
         expires_delta=access_token_expires
     )
-    
-    response.set_cookie(
-        key="access_token",
-        value=access_token,
-        httponly=True,
-        samesite="lax",
-        secure=False,  # TODO: set to True in production
-        max_age=3600
-    )
-    
+
+    set_auth_cookie(response, access_token)
     logger.info("Email OTP verified successfully")
     return {"message": "Verified mail successfully"}
 
+
 @router.post("/verify_new_mail")
 async def verify_new_mail(verifyEmail: VerifyEmail, response: Response):
-    
     try:
         secret = await get_secret(str(verifyEmail.email))
     except Exception:
         raise HTTPException(status_code=500, detail="Internal error fetching secret")
-    
+
     if not secret:
         raise HTTPException(status_code=404, detail="Email not found")
-    
+
     time_window = 60 * 5
     totp = pyotp.TOTP(s=secret, interval=time_window)
-    
+
     if not totp.verify(verifyEmail.otp):
         raise HTTPException(status_code=400, detail="Invalid or expired OTP")
-    
-    return await update_is_verified(email=verifyEmail.email,is_verified=True)
+
+    return await update_is_verified(email=verifyEmail.email, is_verified=True)
+
 
 @router.patch("/reset_password")
-async def reset_password( user: ResetPassword,
-    current_user: Annotated[User, Depends(get_current_user)]):
-    
+async def reset_password(
+    user: ResetPassword,
+    current_user: Annotated[User, Depends(get_current_user)]
+):
     return await update_user_password(
-            username=current_user.username,
-            new_password=user.new_password
-        )
-   
+        username=current_user.username,
+        new_password=user.new_password
+    )
 
 
 @router.post("/auth/google")
-async def google_auth(payload: GoogleToken,response:Response):
+async def google_auth(payload: GoogleToken, response: Response):
     userinfo = await verify_google_token(payload.token)
     logger.info("USER INFO:")
     logger.info(f"/auth/google userinfo: {userinfo}")
-    logger.info(f"/auth/google userinfo[email]: {userinfo["email"]}")
-    logger.info(f"/auth/google userinfo[name]: {userinfo["name"]}")
+    logger.info(f"/auth/google userinfo[email]: {userinfo['email']}")
+    logger.info(f"/auth/google userinfo[name]: {userinfo['name']}")
     email = userinfo["email"]
-    
+
     try:
         user = await get_user(email=email)
     except UserNotFoundError:
@@ -214,22 +213,12 @@ async def google_auth(payload: GoogleToken,response:Response):
             email=email,
             hashed_password=""
         )
+
     access_token_expires = timedelta(days=ACCESS_TOKEN_EXPIRE_DAY)
-    access_token = create_access_token({"email": email},expires_delta=access_token_expires)
-    logger.info(f"/auth/google token={access_token}")
-    response.set_cookie(
-        key="access_token",
-        value=access_token,
-        httponly=True,
-        samesite="lax",
-        secure=False,       
-        max_age=3600
+    access_token = create_access_token(
+        {"email": email},
+        expires_delta=access_token_expires
     )
+    logger.info(f"/auth/google token={access_token}")
+    set_auth_cookie(response, access_token)
     return {"access_token": access_token}
-
-
-
-
-
-
-
