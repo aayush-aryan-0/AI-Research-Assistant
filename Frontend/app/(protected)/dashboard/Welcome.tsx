@@ -1,8 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
-
 function useStream(path: string) {
   const [data, setData] = useState("");
   const [loading, setLoading] = useState(true);
@@ -12,7 +10,7 @@ function useStream(path: string) {
 
     async function fetchStream() {
       try {
-        const res = await fetch(`${API_BASE}${path}`, {
+        const res = await fetch(`/api/backend/${path}`, {
           method: "POST",
           credentials: "include",
         });

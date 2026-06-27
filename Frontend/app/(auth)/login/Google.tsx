@@ -10,7 +10,7 @@ export default function Google() {
 
     async function callFastAPI(token: string) {
         try{
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/google`, {
+        const res = await fetch(`/api/backend/auth/google`, {
             method: "POST",
             credentials: "include",
             headers: { "Content-Type": "application/json" },
