@@ -3,14 +3,14 @@ from db.embeddings import get_chunk
 import uuid
 from basemodel import Context
 
-__model = SentenceTransformer(
-        "all-MiniLM-L6-v2"
-    )
+
 async def context_retrieval(
         project_id:uuid.UUID,
         query:str, 
         limit:int=3)->str:
-    
+    __model = SentenceTransformer(
+        "all-MiniLM-L6-v2"
+    )
     query_embedding = __model.encode(query).tolist()
     chunks:list[Context] = await get_chunk(
         project_id=project_id,
