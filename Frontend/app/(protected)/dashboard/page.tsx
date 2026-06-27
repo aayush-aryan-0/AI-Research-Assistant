@@ -44,7 +44,7 @@ export default function DashboardPage() {
   const router = useRouter();
   const [isPending, setTransition] = useTransition()
   const {error,setError}=useError()
-  setError("")
+
   const [newProjectRequest, setNewProjectRequest] = useState<NewProject>({ title: "" })
   const { setProject } = useProject()
   const { projects, setProjects } = useProjects()

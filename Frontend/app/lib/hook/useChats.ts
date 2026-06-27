@@ -9,7 +9,6 @@ export default function useChats(projectID:ParamValue){
      const [chats, setChats] = useState<Array<Chat>>([])
     const{setError}=useError()
     useEffect(()=>{
-        setError("");
         (async()=>{
             try {
                 const result = await api.get(`project/${projectID}/chat/get_all`)

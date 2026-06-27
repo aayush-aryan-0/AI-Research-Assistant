@@ -9,7 +9,7 @@ import useDocuments from "@/app/lib/hook/useDocuments"
 import useError from "@/app/(protected)/lib/hooks/useError"
 export default function DocumentPage() {
   const {error, setError} = useError()
-  setError("")
+ 
   const { projectID } = useParams()
   const { documents, setDocuments } = useDocuments(projectID)
 
