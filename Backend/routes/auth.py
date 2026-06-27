@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Response, HTTPException, status,Depends
 from datetime import timedelta
 from user_auth import register_user,login_user,update_user_password
-from db.users import get_is_verified,update_is_verified
+from db.users import update_is_verified
 from jwtAuth import get_current_user
 from log import logger
 from basemodel import RegisterUser,LoginUser,EmailSchema,VerifyEmail,GoogleToken,ResetPassword,User

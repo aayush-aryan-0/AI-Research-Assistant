@@ -3,7 +3,7 @@ from typing import Annotated
 from db.chat_messages import *
 from db.chats import *
 from jwtAuth import get_current_user
-from basemodel import User,NewChat,Chat,UpdateChatTitle,Project
+from basemodel import User,NewChat,Chat,UpdateChatTitle
 from sqlalchemy.exc import IntegrityError
 from log import logger
 from errors import ChatNotFound
