@@ -12,7 +12,7 @@ from log import logger
 import uuid
 from errors import DocumentNotFoundError
 from pydantic import BaseModel
-from rag.embedding import emebedding
+
 from errors import DocumentNotFoundError
 router=APIRouter(prefix="/project/{project_id}/documents",tags=["project_documents"])
 
@@ -64,7 +64,7 @@ async def upload_file(
         chunk_metadata,chunks = await document_processing(pdf_path=path)
         
         document = await add_document(project_id=project_id,filename=file.filename,file_path=path)
-        
+        from rag.embedding import emebedding
         await emebedding(project_id=project_id,
                          document_id=document.id,
                          chunk_metadata=chunk_metadata,
