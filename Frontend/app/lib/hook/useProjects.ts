@@ -8,6 +8,7 @@ export default function useProjects(){
     const [projects, setProjects] = useState<Array<Project>>([])
     const {setError}=useError()
     useEffect(()=>{
+        setError("");
         (async()=>{
             try {
                 const result = await api.get(`project/get_all`)

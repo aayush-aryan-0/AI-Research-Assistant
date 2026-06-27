@@ -11,6 +11,7 @@ export default function useDocuments(projectID:ParamValue){
         const {setError}=useError()
 
     useEffect(()=>{
+        setError("");
         (async()=>{
 
             try {

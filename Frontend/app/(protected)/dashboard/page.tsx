@@ -44,7 +44,7 @@ export default function DashboardPage() {
   const router = useRouter();
   const [isPending, setTransition] = useTransition()
   const {error,setError}=useError()
-
+  setError("")
   const [newProjectRequest, setNewProjectRequest] = useState<NewProject>({ title: "" })
   const { setProject } = useProject()
   const { projects, setProjects } = useProjects()
@@ -53,6 +53,7 @@ export default function DashboardPage() {
 
   async function deleteProject(projectID: string) {
     try {
+      setError("")
       await api.delete(`/project/`, {
         data: { project_id: projectID },
       })

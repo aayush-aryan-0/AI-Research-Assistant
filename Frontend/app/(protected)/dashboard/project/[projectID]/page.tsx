@@ -20,6 +20,7 @@ export default function ProjectPage() {
   const { projectID } = useParams()
   const [isPending, setTransition] = useTransition()
   const {error,setError}=useError()
+  setError("")
   const [newChatRequest, setNewChatRequest] = useState({ title: "" })
   const {setChat}=useChat()
   const {chats,setChats}=useChats(projectID)
@@ -29,6 +30,7 @@ export default function ProjectPage() {
 
   async function deleteChat(chatID: string) {
     try {
+      setError("")
       await api.delete(`/project/${projectID}/chat/`, {
         data: {chat_id:chatID},
       })
@@ -41,6 +43,7 @@ export default function ProjectPage() {
   }
  
   async function newChat() {
+    setError("")
     setTransition(async () => {
       try {
         const result = await api.post(`/project/${projectID}/chat/new_chat`, newChatRequest)

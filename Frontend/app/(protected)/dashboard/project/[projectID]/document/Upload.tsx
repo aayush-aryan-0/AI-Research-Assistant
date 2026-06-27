@@ -9,9 +9,11 @@ export default function Upload() {
   const [docId, setDocId] = useState<string | null>(null)
   const [uploading, setUploading] = useState(false)
   const {error, setError }= useError()
+  setError("")
   const { projectID } = useParams();
 
   async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    setError("")
     const file = e.target.files?.[0]
     if (!file) return
     setUploading(true)
