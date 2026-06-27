@@ -1,20 +1,32 @@
+import sys
+import os
+print("1. starting", flush=True)
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
+print("2. fastapi imported", flush=True)
+
 from user_auth import startup_db
 from log import logger
+print("3. user_auth imported", flush=True)
+
 from routes import auth, user, summaries, chat, project, chat_message, project_document, welcome
+print("4. routes imported", flush=True)
+
 import uvicorn
-import os
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    print("5. lifespan started", flush=True)
     await startup_db()
+    print("6. db ready", flush=True)
     logger.info("Startup")
     yield
     logger.info("Shutdown")
 
 app = FastAPI(lifespan=lifespan)
+print("7. app created", flush=True)
 
 origins = [
     "http://192.168.0.7:3000",
