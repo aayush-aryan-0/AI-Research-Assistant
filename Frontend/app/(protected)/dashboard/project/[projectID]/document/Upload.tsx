@@ -19,11 +19,11 @@ export default function Upload() {
     setUploading(true)
     setError("")
     setDocId(null)
-    const BACKEND_API=process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000"
+
     try {
       const formData = new FormData()
       formData.append("file", file)
-      const res = await fetch(`${BACKEND_API}/project/${projectID}/documents/upload`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/project/${projectID}/documents/upload`, {
         method: "POST", body: formData, credentials: "include",
       })
       if (!res.ok) throw new Error("Upload failed")
