@@ -4,7 +4,7 @@ import { useParams } from "next/navigation"
 import api from "@/app/lib/api/api"
 import { isAxiosError } from "axios"
 import ProjectTitle from "@/app/(protected)/lib/components/ProjectTitle"
-import Error from "@/app/(protected)/lib/components/Error"
+import Error from "@/app/components/Error"
 import useDocuments from "@/app/lib/hook/useDocuments"
 import useError from "@/app/(protected)/lib/hooks/useError"
 export default function DocumentPage() {

@@ -11,7 +11,7 @@ import useStats from "@/app/lib/hook/useStats";
 import useActivity from "@/app/lib/hook/useActivity";
 import { ActivityItem } from "@/app/lib/hook/useActivity"
 import useError from "../lib/hooks/useError";
-import Error from "../lib/components/Error";
+import Error from "../../components/Error";
 type NewProject = {
   title: string
 }

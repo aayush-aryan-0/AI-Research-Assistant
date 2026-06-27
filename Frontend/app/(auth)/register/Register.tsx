@@ -4,7 +4,7 @@ import { useState } from "react";
 import registrationRequest from "./registrationRequest";
 import UserRegisterRequest from "./types/UserRegisterRequest.type";
 import APIResponse from "@/app/types/APIResponse.types";
-import Error from "@/app/(protected)/lib/components/Error";
+import Error from "@/app/components/Error";
 export default function Register() {
     const router = useRouter();
     const [error, setError] = useState("");

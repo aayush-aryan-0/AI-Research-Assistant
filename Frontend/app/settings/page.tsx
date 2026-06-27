@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation"
 import ToggleThemeButton from "../components/Navbar/ToggleThemeButton";
 import UpdateAccountButton from "./UpdateAccoutButton";
-
+import Logout from "../components/Navbar/Logout";
 export default function SettingsPage() {
     const router = useRouter()
 
@@ -50,6 +50,7 @@ export default function SettingsPage() {
                         >
                             Delete Account
                         </button>
+                        <Logout/>
                     </div>
                 </div>
 

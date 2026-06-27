@@ -4,7 +4,7 @@ import { useState } from "react";
 import UserLoginRequest from "./types/UserLoginRequest.type";
 import APIResponse from "@/app/types/APIResponse.types";
 import loginRequest from "./loginRequest";
-import Error from "@/app/(protected)/lib/components/Error";
+import Error from "@/app/components/Error";
 
 export default function Login() {
     const router = useRouter();

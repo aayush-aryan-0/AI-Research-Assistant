@@ -10,7 +10,7 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
 import useChat from "@/app/(protected)/lib/hooks/useChat"
-import Error from "@/app/(protected)/lib/components/Error"
+import Error from "@/app/components/Error"
 
 type ChatMessage = {
   message: string,
