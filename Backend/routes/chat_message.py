@@ -14,7 +14,7 @@ import os
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-from rag.context_retrival import context_retrieval
+
 from db.project_document import get_document_by_project_id
 from errors import ChatMessageNotFound
 load_dotenv()
@@ -31,7 +31,7 @@ async def send_prompt(
     chatMessages:ChatMessage, 
     current_user: Annotated[User, Depends(get_current_user)]):
 
-    
+    from rag.context_retrival import context_retrieval
     context=await context_retrieval(project_id=project_id,query=chatMessages.message)
    
         
