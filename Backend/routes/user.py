@@ -1,11 +1,11 @@
 from fastapi import Depends,Response,HTTPException,APIRouter
 from user_auth import update_user_details,delete_user_account,update_user_password
-from basemodel import DeleteUser,UpdateUser,User,UserInDB,UpdatePassword
+from basemodel import DeleteUser,UpdateUser,User,UserInDB,UpdatePassword,ActivityItem,StatsResponse
 from jwtAuth import get_current_user
 from dotenv import load_dotenv
 from errors import UserNotFoundError
 from typing import Annotated
-
+from user_activity import total_user_activity,recent_user_activity
 load_dotenv()
 
 router = APIRouter(prefix="/user", tags=["user"])
@@ -62,4 +62,16 @@ async def delete_user(user:DeleteUser,response:Response,
 
 
  
+ 
+
+@router.get("/stats", response_model=StatsResponse)
+async def stats(user=Depends(get_current_user)):
+    return await total_user_activity.total(user.id)
+ 
+ 
+@router.get("/activity", response_model=list[ActivityItem])
+async def activity(user=Depends(get_current_user)):
+    return await recent_user_activity.recent(user.id)
+ 
+
     

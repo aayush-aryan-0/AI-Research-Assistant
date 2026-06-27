@@ -7,13 +7,9 @@ from basemodel import User,NewProject,Project,UpdateProjectTitle
 from sqlalchemy.exc import IntegrityError
 from log import logger
 from errors import ProjectNotFound
-
+import uuid
 router=APIRouter(prefix="/project",tags=["project"])
   
-OLLAMA_URL="http://localhost:11434/api/chat"
-
-
-
 
 @router.post("/new")
 async def new_project(newProject:NewProject,current_user: Annotated[User, Depends(get_current_user)]):
@@ -56,9 +52,6 @@ async def get_all_projects(
 )->list[Project]:
     try:
         return await get_all_projects_by_user(current_user.id)
-    except ProjectNotFound:
-        logger.warning("Project Not Found")
-        raise HTTPException(status_code=400,detail="Project Not Found")
     except Exception as e:
         logger.error(f"Error occurred while adding new chat user: {str(e)}")
         raise HTTPException(status_code=500, detail="An error occurred while adding new chat")
@@ -66,5 +59,26 @@ async def get_all_projects(
 
 
 
+
+import pydantic 
+class ProjectDeleteRequest(pydantic.BaseModel):
+    project_id:uuid.UUID
+
+@router.delete("/")
+async def delete_project_api(
+    projectDeleteRequest:ProjectDeleteRequest,
+    current_user:Annotated[User,Depends(get_current_user)])->dict:
+    try:
+        project=await get_project(projectDeleteRequest.project_id)
+
+        await delete_project(id=project.id)
+        return {"deleted": project.title}
+    except ProjectNotFound:
+        raise HTTPException(status_code=400,detail="No such project found")
+    except Exception as e:
+        logger.error(f"Error occurred while deleting project: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred while deleting project")
+
+    
 
 

@@ -1,5 +1,5 @@
 from sqlalchemy import Text,select,DateTime,func,ForeignKey,Enum as SQLEnum
-from sqlalchemy.orm import Mapped,mapped_column
+from sqlalchemy.orm import Mapped,mapped_column,relationship
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
 from datetime import datetime
@@ -16,7 +16,7 @@ __all__ = [
 
 
 
-# Define the User table model
+
 class __ChatMessage(Base):
     __tablename__ = 'chat_messages'
 
@@ -28,7 +28,8 @@ class __ChatMessage(Base):
         DateTime,
         server_default=func.now()
     )
- 
+    
+    chat = relationship("__Chats", back_populates="messages")
     
     def __repr__(self):
         return f"<document(id='{self.id}', userid='{self.user_id},message='{self.message}')>"
@@ -62,8 +63,8 @@ async def get_all_chat_messages_by_chat_id(chat_id:uuid.UUID)->list[ChatMessage]
         try:
             result = await session.execute(select(__ChatMessage).where(__ChatMessage.chat_id==chat_id))
             chats=result.scalars().all()
-            if not chats:
-                raise ChatMessageNotFound()
             return list(chats)
         except Exception as e:
             raise e
+        
+

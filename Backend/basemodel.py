@@ -1,5 +1,5 @@
 from pydantic import BaseModel,EmailStr,ConfigDict
-from typing import List,Optional
+from typing import Optional
 from datetime import datetime
 from role import Role
 import uuid
@@ -142,3 +142,18 @@ class Context(BaseModel):
     similarity:float
 
     model_config = ConfigDict(from_attributes=True)
+class StatsResponse(BaseModel):
+    total_projects: int
+    total_documents: int
+    total_chats: int
+    total_chat_messages: int
+ 
+from user_activity.activity import ActivityType
+class ActivityItem(BaseModel):
+    type: ActivityType    
+    label: str
+    timestamp: datetime
+ 
+    model_config = {"from_attributes": True}
+ 
+ 

@@ -1,25 +1,24 @@
 "use client"
+import { useTheme } from "next-themes"
 
-import { useTheme } from "next-themes";
-import Image from "next/image";
-export default function ToggleThemeButton(){
-   const {theme, setTheme,resolvedTheme} = useTheme();
- 
-  return(
+export default function ToggleThemeButton() {
+  const { theme, setTheme, resolvedTheme } = useTheme()
 
-      <button onClick={()=>setTheme(theme==="dark"?"light":"dark")}
-       className="w-fit h-fit p-0.5 font-bold bg-gray-900 text-white
-        dark:text-black dark:bg-white rounded-full 
-        hover:opacity-75 shadow-lg cursor-pointer
-        ">
-         <Image
-         className="block"
-          src={resolvedTheme==="dark"?"/sun.png":"/moon.png"}
-          alt={resolvedTheme==="dark"?"light mode":"dark mode"}
-          width={30}
-          height={30}
-          />
-      </button>
- 
+  return (
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="w-8 h-8 flex items-center justify-center rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+      aria-label="Toggle theme"
+    >
+      {resolvedTheme === "dark" ? (
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 7a5 5 0 100 10A5 5 0 0012 7z" />
+        </svg>
+      ) : (
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      )}
+    </button>
   )
 }

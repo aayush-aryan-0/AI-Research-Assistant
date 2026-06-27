@@ -63,7 +63,7 @@ async def update_user(old_username:str,new_username:Optional[str]=None,new_full_
 async def delete_user(username:str)->None:
     async with session_local() as session:
         try:
-            result = await session.execute(select(__User).where(__User.username==username))
+            result = await session.execute(select(__Users).where(__Users.username==username))
             user=result.scalar_one_or_none()
             if user is None:
                 raise UserNotFoundError()

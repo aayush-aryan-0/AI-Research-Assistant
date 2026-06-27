@@ -1,0 +1,16 @@
+# Python
+__pycache__
+*.pyc
+*.pyo
+.venv
+venv
+
+# Next.js
+node_modules
+.next
+
+# General
+.env
+.env.*
+.git
+.gitignore

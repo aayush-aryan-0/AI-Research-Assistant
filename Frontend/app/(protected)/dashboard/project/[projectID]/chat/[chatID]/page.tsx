@@ -1,11 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useTransition } from "react"
+import { useState, useEffect, useTransition } from "react"
 import { useParams } from "next/navigation"
 import { ParamValue } from "next/dist/server/request/params"
 import api from "@/app/lib/api/api"
-import { useRouter } from "next/navigation"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -21,21 +19,20 @@ type ChatMessage = {
   timestamp: string
 }
 
-
 export default function ChatPage() {
-  const router=useRouter()
   const [isPending, setTransition] = useTransition()
   const [input, setInput] = useState<string>("")
   const [output, setOutput] = useState<string>("")
   const [error, setError] = useState<string>("")
   const [chatMessages, setChatMessages] = useState<Array<ChatMessage>>([])
   const { projectID, chatID } = useParams()
-  const {chat}=useChat()
+  const { chat } = useChat()
+
   useEffect(() => {
     async function loadHistory() {
       try {
         const result = await api.get(`project/${projectID}/chat/${chatID}/message/get_all`)
-        setChatMessages(result.data)
+        if (result.data.length > 0) setChatMessages(result.data)
       } catch (e) {
         console.error("Failed to load history", e)
       }
@@ -55,12 +52,9 @@ export default function ChatPage() {
         }
       )
 
-      if (!response.ok){ 
-        
-        console.log(response)
-        
+      if (!response.ok) {
         setError("Request failed")
-
+        return
       }
 
       const reader = response.body!.getReader()
@@ -75,153 +69,76 @@ export default function ChatPage() {
         setOutput((prev) => prev + chunk)
       }
 
-      setChatMessages((prev) => [
-        ...prev,
-        {
-          message: aiChat,
-          role: "assistant",
-          chat_id: chatID,
-          timestamp: new Date().toISOString()
-        },
-      ])
+      setChatMessages((prev) => [...prev, { message: aiChat, role: "assistant", chat_id: chatID, timestamp: new Date().toISOString() }])
       setOutput("")
     })
   }
 
   async function sendMessage() {
-    try {
-      if (!input.trim()) return
-      const newMessages: Array<ChatMessage> = [
-        ...chatMessages,
-        {
-          message: input,
-          role: "user",
-          chat_id: chatID,
-          timestamp: new Date().toISOString()
-        },
-      ]
-      setChatMessages(newMessages)
-      setInput("")
-      await handleStream(newMessages[newMessages.length-1])
-    } catch (error: unknown) {
-      setError(String(error))
-    }
+    if (!input.trim()) return
+    const userMsg = { message: input, role: "user", chat_id: chatID, timestamp: new Date().toISOString() }
+    setChatMessages((prev) => [...prev, userMsg])
+    setInput("")
+    await handleStream(userMsg)
   }
 
   return (
-    <div className="flex flex-col h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
-
+    <div className="flex flex-col h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
       {/* Header */}
-      <div className="shrink-0 px-6 py-4 border-b border-zinc-200 dark:border-zinc-800 font-semibold text-lg">
+      <div className="shrink-0 px-6 py-4 border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md sticky top-0 z-10 font-semibold text-gray-900 dark:text-gray-100">
         Chat: {chat.title}
       </div>
 
-      {/* Error */}
-      <Error error={error}/>
+      <Error error={error} />
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-6 py-4">
-        <ul className="flex flex-col gap-3 max-w-2xl mx-auto">
+      <div className="flex-1 overflow-y-auto px-6 py-8">
+        <div className="flex flex-col gap-6 max-w-2xl mx-auto">
           {chatMessages.map((msg, index) => {
             const isUser = msg.role === "user"
             return (
-              <li
-                key={index}
-                className={`flex flex-col gap-1 max-w-[70%] ${isUser ? "self-end items-end" : "self-start items-start"}`}
-              >
-                <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
-                  isUser
-                    ? "bg-green-500 text-white rounded-br-sm"
-                    : "bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-bl-sm"
+              <div key={index} className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
+                <div className={`max-w-[85%] px-5 py-3 rounded-2xl text-sm leading-relaxed ${
+                  isUser 
+                    ? "bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900 rounded-br-none" 
+                    : "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200 border border-gray-200 dark:border-gray-800 rounded-bl-none"
                 }`}>
-                  <ReactMarkdown  
-                  remarkPlugins={[remarkGfm, remarkMath]}
-                  rehypePlugins={[rehypeKatex]}
-                  >
-                        {msg.message}
-                  </ReactMarkdown>
-                 
+                  <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{msg.message}</ReactMarkdown>
                 </div>
-                <span className="text-xs text-zinc-400 dark:text-zinc-600 px-1">
-                  {new Date(msg.timestamp).toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" })}
-                </span>
-              </li>
+              </div>
             )
           })}
 
-          {/* Streaming output */}
           {output && (
-            <li className="self-start items-start flex flex-col gap-1 max-w-[70%]">
-              <div className="px-4 py-2.5 rounded-2xl rounded-bl-sm text-sm leading-relaxed bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700">
-                <ReactMarkdown  
-                  remarkPlugins={[remarkGfm, remarkMath]}
-                  rehypePlugins={[rehypeKatex]}
-                  >
-                        {output}
-                </ReactMarkdown>
-                <span className="inline-block w-1.5 h-3.5 ml-0.5 bg-zinc-400 dark:bg-zinc-500 animate-pulse rounded-sm" />
+            <div className="justify-start flex">
+              <div className="max-w-[85%] px-5 py-3 rounded-2xl rounded-bl-none text-sm bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+                <ReactMarkdown remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}>{output}</ReactMarkdown>
+                <span className="inline-block w-2 h-4 ml-1 bg-gray-400 animate-pulse" />
               </div>
-            </li>
+            </div>
           )}
-        </ul>
+        </div>
       </div>
 
       {/* Input */}
-      <div className="shrink-0 border-t border-zinc-200 dark:border-zinc-800 px-6 py-4">
-        <form
-          className="flex max-w-2xl mx-auto"
-          onSubmit={(e) => { e.preventDefault(); sendMessage() }}
-        >
+      <div className="shrink-0 bg-white dark:bg-gray-950 p-4 border-t border-gray-200 dark:border-gray-800">
+        <form className="flex max-w-2xl mx-auto gap-2" onSubmit={(e) => { e.preventDefault(); sendMessage() }}>
           <input
             type="text"
-            placeholder="Enter your message…"
+            placeholder="Type your message..."
             value={input}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)}
-            className="
-              flex-1
-              bg-white dark:bg-zinc-900
-              text-zinc-900 dark:text-zinc-100
-              placeholder-zinc-400 dark:placeholder-zinc-600
-              border border-zinc-200 dark:border-zinc-800 border-r-0
-              rounded-l-lg px-4 py-2.5 text-sm
-              outline-none focus:border-green-500 dark:focus:border-green-500
-              transition-colors
-            "
+            onChange={(e) => setInput(e.target.value)}
+            className="flex-1 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-500 transition-all"
           />
           <button
             type="submit"
-            disabled={isPending}
-            className="
-              bg-green-600 hover:bg-green-700
-              disabled:opacity-50 disabled:cursor-not-allowed
-              text-white text-sm font-medium
-              rounded-r-lg px-5 py-2.5
-              flex items-center justify-center min-w-20
-              transition-colors
-            "
+            disabled={isPending || !input.trim()}
+            className="bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 font-medium rounded-lg px-6 py-2 disabled:opacity-50 transition-colors cursor-pointer"
           >
-            {isPending
-              ? <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-              : "Send"
-            }
-          </button>
-          <button
-            type="button"
-            onClick={()=>router.push(`/dashboard/project/${projectID}/chat/${chatID}/upload`)}
-            className="
-              bg-gray-600 hover:bg-gray-700
-              disabled:opacity-50 disabled:cursor-not-allowed
-              text-white text-sm font-medium
-              rounded-r-lg px-5 py-2.5
-              flex items-center justify-center min-w-20
-              transition-colors
-            "
-          >
-           Upload
+            {isPending ? "Sending..." : "Send"}
           </button>
         </form>
       </div>
-
     </div>
   )
 }

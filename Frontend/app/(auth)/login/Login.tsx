@@ -4,6 +4,7 @@ import { useState } from "react";
 import UserLoginRequest from "./types/UserLoginRequest.type";
 import APIResponse from "@/app/types/APIResponse.types";
 import loginRequest from "./loginRequest";
+import Error from "@/app/(protected)/lib/components/Error";
 
 export default function Login() {
     const router = useRouter();
@@ -35,23 +36,19 @@ export default function Login() {
         router.push("/dashboard");
     }
 
-    const inputClass = "w-full rounded-lg px-3 py-2 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500";
-    const labelClass = "text-sm font-medium text-gray-700 dark:text-gray-300";
+   const inputClass = "w-full rounded-xl px-4 py-3 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-500/40 focus:border-blue-500 dark:focus:border-blue-400 transition-all duration-200 disabled:opacity-60 disabled:bg-gray-100 disabled:cursor-not-allowed placeholder:text-gray-400";
 
+    const labelClass = "text-sm font-medium text-gray-700 dark:text-gray-300 ml-1";
     return (
         <form
-            onSubmit={(e) => { e.preventDefault(); checkLogin(); }}
-            className="flex flex-col gap-4 rounded-xl w-full max-w-md p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm"
-        >
+    onSubmit={(e) => { e.preventDefault(); checkLogin(); }} 
+    className="flex flex-col gap-5 rounded-2xl w-full max-w-md p-8 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-xl shadow-gray-200/50 dark:shadow-none"
+>
             <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                 Log in
             </h2>
 
-            {error && (
-                <p className="text-sm text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg px-3 py-2">
-                    {error}
-                </p>
-            )}
+            <Error error={error}/>
 
             <div className="flex flex-col gap-1.5">
                 <label htmlFor="login-username" className={labelClass}>Username</label>
@@ -70,9 +67,10 @@ export default function Login() {
             </div>
 
             <button type="submit"
-                className="w-full py-2 mt-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 font-semibold rounded-lg hover:opacity-90 transition-opacity duration-150 cursor-pointer">
-                Log in
-            </button>
+    className="w-full py-3 mt-4 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 font-semibold rounded-xl hover:bg-gray-800 dark:hover:bg-gray-200 active:scale-[0.98] transition-all duration-200 shadow-sm"
+>
+    Log in 
+</button>
         </form>
     )
 }

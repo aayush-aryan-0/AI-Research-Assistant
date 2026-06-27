@@ -13,13 +13,13 @@ import uuid
 from errors import DocumentNotFoundError
 from pydantic import BaseModel
 from rag.embedding import emebedding
-
+from errors import DocumentNotFoundError
 router=APIRouter(prefix="/project/{project_id}/documents",tags=["project_documents"])
 
 @router.get("/",response_model=list[ProjectDocumet])
 async def send_all_documets(project_id:uuid.UUID,
         current_user: Annotated[User,Depends(get_current_user)]
-)->list[ProjectDocumet]:
+)->list[ProjectDocumet]|None:
     try:
         return await get_document_by_project_id(project_id)
     except Exception as e:

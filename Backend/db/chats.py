@@ -1,5 +1,5 @@
 from sqlalchemy import Text,select,DateTime,func,ForeignKey
-from sqlalchemy.orm import Mapped,mapped_column
+from sqlalchemy.orm import Mapped,mapped_column,relationship
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
 from errors import ChatNotFound
@@ -12,6 +12,7 @@ __all__ = [
     "get_chat",
     "update_chat_title",
     "get_all_chats_by_project",
+    "delete_chat"
    
 ]
 
@@ -26,7 +27,15 @@ class __Chats(Base):
         DateTime,
         server_default=func.now()
     )
- 
+    
+    project = relationship("__Projects", back_populates="chats")
+    
+  
+    messages = relationship(
+        "__ChatMessage", 
+        back_populates="chat", 
+        cascade="all, delete-orphan"
+    )
     
     def __repr__(self):
         return f"<document(id='{self.id}', project_id='{self.project_id},title='{self.title}')>"
@@ -73,10 +82,20 @@ async def get_all_chats_by_project(project_id:uuid.UUID)->list[Chat]:
         try:
             result = await session.execute(select(__Chats).where(__Chats.project_id==project_id))
             chats=result.scalars().all()
-            if not chats:
-                raise ChatNotFound()
             return list(chats)
         except Exception as e:
             raise e
         
-        
+
+async def delete_chat(id: uuid.UUID) -> None:
+    async with session_local() as session:
+        try:
+            result = await session.execute(select(__Chats).where(__Chats.id == id))
+            chat = result.scalar_one_or_none()
+            if chat is None:
+                raise ChatNotFound()
+            await session.delete(chat)
+            await session.commit()
+        except Exception as e:
+            await session.rollback()
+            raise e

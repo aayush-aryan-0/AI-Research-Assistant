@@ -297,9 +297,6 @@ async def get_all_chat_messages(chat_id:uuid.UUID,
 )->list[ChatMessage]:
     try:
         return await get_all_chat_messages_by_chat_id(chat_id=chat_id)
-    except ChatMessageNotFound:
-        logger.warning("Chat Not Found")
-        raise HTTPException(status_code=400,detail="Chat Not Found")
     except Exception as e:
         logger.error(f"Error occurred while veiwing all chat in this project: {str(e)}")
         raise HTTPException(status_code=500, 
@@ -308,6 +305,32 @@ async def get_all_chat_messages(chat_id:uuid.UUID,
 
 
 
+
+
+@router.post("/greetings")
+async def send_greetings(
+    
+    current_user: Annotated[User, Depends(get_current_user)]):
+
+   
+      
+    def gemini_chat():
+        response = client.models.generate_content_stream(
+            model="gemini-3.1-flash-lite",
+            contents=f"Greet {current_user.username}", # type: ignore
+            config=types.GenerateContentConfig(
+                    system_instruction = f"""
+                        You are a helpful assistant specialized in greating people.
+                    """
+            )
+        )
+        for chunk in response:
+            text = chunk.text or ""
+            yield text
+        
+       
+    
+    return StreamingResponse(gemini_chat(),media_type="text/plain")
 
 
 

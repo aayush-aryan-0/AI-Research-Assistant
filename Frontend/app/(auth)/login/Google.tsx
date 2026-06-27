@@ -20,7 +20,7 @@ export default function Google() {
             console.error(res)
             return
         }
-        router.push("/home")}
+        router.push("/dashboard")}
         catch(error){console.error(error)}
     }
     const called = useRef(false)

@@ -4,7 +4,7 @@ from sqlalchemy.dialects.postgresql import UUID
 import uuid
 from errors import SummaryNotFound
 from datetime import datetime
-from typing import Sequence
+from basemodel import SummeryType
 from db.db_engine import session_local,Base
 __all__ = [
     "add_summary",
@@ -49,13 +49,11 @@ async def get_summary(id:uuid.UUID)->__Summaries:
         except Exception as e:
             raise e
         
-async def get_all_summaries_by_project(project_id:uuid.UUID)->Sequence[__Summaries]:
+async def get_all_summaries_by_project(project_id:uuid.UUID)->list[SummeryType]:
     async with session_local() as session:
         try:
             result = await session.execute(select(__Summaries).where(__Summaries.project_id==project_id))
             summary=result.scalars().all()
-            if not summary:
-                raise SummaryNotFound()
-            return summary
+            return list(summary)
         except Exception as e:
             raise e

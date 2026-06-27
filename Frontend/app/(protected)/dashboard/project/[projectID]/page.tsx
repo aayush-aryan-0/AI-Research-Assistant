@@ -2,45 +2,51 @@
 
 
 import { useParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import api from "@/app/lib/api/api";
 import { isAxiosError } from "axios";
-import Chat from "@/app/(protected)/lib/type/Chat.type";
 import ProjectTitle from "@/app/(protected)/lib/components/ProjectTitle";
 import useChat from "@/app/(protected)/lib/hooks/useChat";
 import Error from "@/app/(protected)/lib/components/Error";
+import useChats from "@/app/lib/hook/useChats";
+import useDocuments from "@/app/lib/hook/useDocuments";
+import useError from "@/app/(protected)/lib/hooks/useError";
 
 
 export default function ProjectPage() {
   const router = useRouter()
   const { projectID } = useParams()
   const [isPending, setTransition] = useTransition()
-  const [error, setError] = useState<string>("")
+  const {error,setError}=useError()
   const [newChatRequest, setNewChatRequest] = useState({ title: "" })
-  const [chats, setChats] = useState<Array<Chat>>([])
   const {setChat}=useChat()
+  const {chats,setChats}=useChats(projectID)
+  const {documents}=useDocuments(projectID)
+  const isDocs=documents.length!==0
 
-  useEffect(() => {
-    async function loadHistory() {
-      try {
-        const result = await api.get(`project/${projectID}/chat/get_all`)
-        setChats(result.data)
-      } catch (e) {
-        console.error("Failed to load history", e)
-        setError("Failed to load chats")
-      }
+
+  async function deleteChat(chatID: string) {
+    try {
+      await api.delete(`/project/${projectID}/chat/`, {
+        data: {chat_id:chatID},
+      })
+      setChats((prev) => prev.filter((d) => d.id !== chatID))
+    } catch (e) {
+      if (isAxiosError(e)) console.log(e.cause)
+      else console.error("Failed to delete Chat", e)
+      setError("Failed to delete Chat")
     }
-    loadHistory()
-  }, [projectID])
-
+  }
+ 
   async function newChat() {
     setTransition(async () => {
       try {
         const result = await api.post(`/project/${projectID}/chat/new_chat`, newChatRequest)
         setChat(result.data)
         router.push(`/dashboard/project/${projectID}/chat/${result.data.id}`)
+        
       } catch (error:unknown) {
         if (isAxiosError(error))
             console.log(error.response?.data?.detail)
@@ -62,7 +68,25 @@ export default function ProjectPage() {
         {/* Error */}
         <Error error={error}/>
 
+        <button
+            type="button"
+            onClick={()=>router.push(`/dashboard/project/${projectID}/document`)}
+            className="
+              bg-gray-600 hover:bg-gray-700
+              disabled:opacity-50 disabled:cursor-not-allowed
+              text-white text-sm font-medium
+              rounded-lg px-5 py-2.5
+              flex items-center justify-center min-w-20
+              transition-colors
+            "
+          >
+           Go To Documents
+          </button>
+
         {/* New chat */}
+        {
+          isDocs?
+          <div>
         <section>
           <form
             className="flex"
@@ -71,6 +95,7 @@ export default function ProjectPage() {
             <input
               type="text"
               placeholder="New chat name…"
+
               value={newChatRequest.title}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setNewChatRequest({ title: e.target.value })
@@ -103,24 +128,12 @@ export default function ProjectPage() {
                 : "Create"
               }
             </button>
-             <button
-            type="button"
-            onClick={()=>router.push(`/dashboard/project/${projectID}/document`)}
-            className="
-              bg-gray-600 hover:bg-gray-700
-              disabled:opacity-50 disabled:cursor-not-allowed
-              text-white text-sm font-medium
-              rounded-r-lg px-5 py-2.5
-              flex items-center justify-center min-w-20
-              transition-colors
-            "
-          >
-           Go To Documents
-          </button>
+             
           </form>
+          
         </section>
 
-        {/* Chat list */}
+    
         <section>
           <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-400 dark:text-zinc-600 mb-3">
             Chats
@@ -134,7 +147,10 @@ export default function ProjectPage() {
             <ul className="border border-zinc-200 dark:border-zinc-800 rounded-lg overflow-hidden bg-white dark:bg-zinc-900 divide-y divide-zinc-200 dark:divide-zinc-800">
               {chats.map((chat) => (
                 <li key={chat.id}>
-                  <button
+                   <div
+                    className="flex flex-row gap-1 p-4"
+                  >
+                       <button
                     onClick={() => {
                         setChat(chat);
                         router.push(`/dashboard/project/${projectID}/chat/${chat.id}`)
@@ -155,12 +171,28 @@ export default function ProjectPage() {
                         year: "numeric", month: "short", day: "numeric"
                       })}
                     </span>
+                    
                   </button>
+                  <button
+                  onClick={() => deleteChat(chat.id)}
+                  className="ml-4 text-xs text-red-500 hover:text-red-700 dark:hover:text-red-400 shrink-0 cursor-pointer"
+                >
+                  Delete
+                </button>
+
+                  </div>
+                 
                 </li>
               ))}
             </ul>
           )}
         </section>
+        </div>:
+         <p className="text-sm text-zinc-400 dark:text-zinc-600 text-center py-10">
+             Upload Documents to chat with AI Research Assistant.<br/>
+              Go to Documents to Upload Documents.
+        </p>
+        }
 
       </div>
     </div>

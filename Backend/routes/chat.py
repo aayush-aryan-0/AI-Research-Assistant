@@ -55,15 +55,33 @@ async def update_title(chat_id:uuid.UUID,newTitle:UpdateChatTitle,current_user: 
 @router.get("/get_all",response_model=list[Chat])
 async def get_all_chat(project_id:uuid.UUID,
         current_user: Annotated[User,Depends(get_current_user)]
-)->list[Chat]:
+)->list[Chat]|None:
     try:
         return await get_all_chats_by_project(project_id=project_id)
-    except ChatNotFound:
-        logger.warning("Chat Not Found")
-        raise HTTPException(status_code=400,detail="Chat Not Found")
     except Exception as e:
         logger.error(f"Error occurred while veiwing all chat in this project: {str(e)}")
         raise HTTPException(status_code=500, 
                             detail="An error occurred while veiwing all chat in this project")
 
 
+
+import pydantic
+class ChatDeleteRequest(pydantic.BaseModel):
+    chat_id:uuid.UUID
+
+@router.delete("/")
+async def delete_chat_api(
+    chatDeleteRequest:ChatDeleteRequest,
+    current_user:Annotated[User,Depends(get_current_user)])->dict:
+    try:
+        chat=await get_chat(chatDeleteRequest.chat_id)
+
+        await delete_chat(id=chat.id)
+        return {"deleted": chat.title}
+    except ChatNotFound:
+        raise HTTPException(status_code=400,detail="No such chat found")
+    except Exception as e:
+        logger.error(f"Error occurred while deleting chat: {str(e)}")
+        raise HTTPException(status_code=500, detail="An error occurred while deleting chat")
+
+    

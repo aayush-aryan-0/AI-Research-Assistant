@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Providers from "./Provider";
+import ProjectProvider from "./(protected)/lib/provider/ProjectProvider";
+import ChatProvider from "./(protected)/lib/provider/ChatProvider";
+import ErrorProvider from "./(protected)/lib/provider/ErrorProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,7 +35,13 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col  bg-background text-foreground">
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Providers>
-              {children}
+              <ProjectProvider>
+                <ChatProvider>
+                  <ErrorProvider>
+                    {children}
+                  </ErrorProvider>
+                </ChatProvider>
+              </ProjectProvider>
             </Providers>
           </ThemeProvider>
         </body>

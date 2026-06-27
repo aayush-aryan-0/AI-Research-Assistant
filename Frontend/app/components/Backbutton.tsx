@@ -7,19 +7,12 @@ export default function BackButton() {
     return (
         <button
             onClick={() => router.back()}
-            className="flex items-center
-             gap-1.5 text-sm font-medium
-             w-fit
-             bg-gray-200
-              text-gray-700 dark:text-gray-200
-              dark:bg-gray-600 shadow-lg shadow-gray-300 dark:shadow-md
-              dark:shadow-[#ffffff2a]
-               hover:text-gray-100 dark:hover:text-gray-700 
-               transition-colors duration-150 cursor-pointer 
-               px-3 py-2 rounded-lg hover:bg-gray-500
-                dark:hover:bg-gray-200"
+            className="flex items-center gap-1.5 px-3 py-1.5 w-fit rounded-lg text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-200 cursor-pointer"
         >
-            ← Back
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back
         </button>
     )
 }

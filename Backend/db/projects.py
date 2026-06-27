@@ -1,5 +1,5 @@
 from sqlalchemy import Text,select,DateTime,func,ForeignKey,Enum as SQLEnum,or_
-from sqlalchemy.orm import Mapped,mapped_column
+from sqlalchemy.orm import Mapped,mapped_column,relationship
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
 from basemodel import Project
@@ -11,6 +11,7 @@ __all__ = [
     "get_project",
     "update_project_title",
     "get_all_projects_by_user",
+    "delete_project"
    
 ]
 
@@ -25,10 +26,22 @@ class __Projects(Base):
         DateTime,
         server_default=func.now()
     )
+
+
+    chats = relationship(
+        "__Chats", 
+        back_populates="project", 
+        cascade="all, delete-orphan"
+    )
+    documents = relationship(
+        "__ProjectDocumet", 
+        back_populates="project", 
+        cascade="all, delete-orphan"
+    )
  
     
     def __repr__(self):
-        return f"<document(id='{self.id}', user_id='{self.user_id},title='{self.title}')>"
+        return f"<project(id='{self.id}', user_id='{self.user_id},title='{self.title}')>"
 
 
 async def add_project(user_id:uuid.UUID,title:str)->Project:
@@ -73,8 +86,19 @@ async def get_all_projects_by_user(user_id:uuid.UUID)->list[Project]:
         try:
             result = await session.execute(select(__Projects).where(__Projects.user_id==user_id))
             projects=result.scalars().all()
-            if not projects:
-                raise ProjectNotFound()
             return list(projects)
         except Exception as e:
+            raise e
+        
+async def delete_project(id: uuid.UUID) -> None:
+    async with session_local() as session:
+        try:
+            result = await session.execute(select(__Projects).where(__Projects.id == id))
+            project = result.scalar_one_or_none()
+            if project is None:
+                raise ProjectNotFound()
+            await session.delete(project)
+            await session.commit()
+        except Exception as e:
+            await session.rollback()
             raise e
