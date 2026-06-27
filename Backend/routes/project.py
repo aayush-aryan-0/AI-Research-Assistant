@@ -63,7 +63,7 @@ import pydantic
 class ProjectDeleteRequest(pydantic.BaseModel):
     project_id:uuid.UUID
 
-@router.delete("/")
+@router.delete("/delete")
 async def delete_project_api(
     projectDeleteRequest:ProjectDeleteRequest,
     current_user:Annotated[User,Depends(get_current_user)])->dict:

@@ -81,7 +81,7 @@ async def upload_file(
 class DocumentDeleteRequest(BaseModel):
     document_id:uuid.UUID
 
-@router.delete("/")
+@router.delete("/delete")
 async def delete_document_api(
     documentDeleteRequest:DocumentDeleteRequest,
     current_user:Annotated[User,Depends(get_current_user)])->dict:

@@ -69,7 +69,7 @@ import pydantic
 class ChatDeleteRequest(pydantic.BaseModel):
     chat_id:uuid.UUID
 
-@router.delete("/")
+@router.delete("/delete")
 async def delete_chat_api(
     chatDeleteRequest:ChatDeleteRequest,
     current_user:Annotated[User,Depends(get_current_user)])->dict:

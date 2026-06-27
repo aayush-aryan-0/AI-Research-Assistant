@@ -54,7 +54,7 @@ export default function DashboardPage() {
   async function deleteProject(projectID: string) {
     try {
       setError("")
-      await api.delete(`project`, {
+      await api.delete(`project/delete`, {
         data: { project_id: projectID },
       })
       setProjects((prev) => prev.filter((d) => d.id !== projectID))

@@ -31,7 +31,7 @@ export default function ProjectPage() {
   async function deleteChat(chatID: string) {
     try {
       setError("")
-      await api.delete(`project/${projectID}/chat`, {
+      await api.delete(`project/${projectID}/chat/delete`, {
         data: {chat_id:chatID},
       })
       setChats((prev) => prev.filter((d) => d.id !== chatID))
