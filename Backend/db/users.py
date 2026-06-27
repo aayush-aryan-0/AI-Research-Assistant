@@ -7,7 +7,6 @@ from errors import UserNotFoundError
 from typing import Optional
 from db.db_engine import session_local,Base
 
-from basemodel import User
 
 __all__ = [
     "add_user",
@@ -34,7 +33,7 @@ class __Users(Base):
 
 
 async def add_user(username:str,full_name:str,email:str,hashed_password:str)->None:
-    
+
     async with session_local() as session:
         try:
             new_user=__Users(username=username,full_name=full_name,email=email,hashed_password=hashed_password)
@@ -83,7 +82,7 @@ async def delete_user(username:str)->None:
             raise e
         
 
-async def get_user(username:str="",email:str="")->User:
+async def get_user(username:str="",email:str="")->__Users:
     async with session_local() as session:
         try:
             if username: 
