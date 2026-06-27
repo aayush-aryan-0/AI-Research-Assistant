@@ -14,8 +14,14 @@ DATABASE_URL = os.getenv("DATABASE_DEV_URL")
 if(DATABASE_URL is None):
     raise Exception("Database URL NOT found")
 
-__engine=create_async_engine(DATABASE_URL)
-
+__engine = create_async_engine(
+    DATABASE_URL,
+    pool_size=5,
+    max_overflow=10,
+    pool_timeout=30,
+    pool_recycle=1800,   # recycle connections every 30 mins
+    pool_pre_ping=True,  # ← this is the key fix — tests connection before using it
+)
 session_local = async_sessionmaker(
     bind=__engine,
     autoflush=False,
