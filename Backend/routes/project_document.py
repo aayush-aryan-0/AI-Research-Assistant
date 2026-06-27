@@ -55,7 +55,7 @@ async def upload_file(
             raise HTTPException(status_code=400, detail=f"Type {suffix!r} not allowed")
         
         safe_name = Path(file.filename).name
-        
+        os.makedirs("/files", exist_ok=True)
         path = f"files/{current_user.id}_{uuid.uuid4().hex}_{safe_name}"
 
         async with aiofiles.open(path, "wb") as f:
