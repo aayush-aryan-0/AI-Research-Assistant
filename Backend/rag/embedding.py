@@ -1,9 +1,9 @@
-from sentence_transformers import SentenceTransformer
+
 import uuid
 from db.embeddings import add_embedding
 
 async def emebedding(project_id:uuid.UUID,document_id:uuid.UUID,chunk_metadata:dict,chunks:list[str]):
-    
+    from sentence_transformers import SentenceTransformer
     model = SentenceTransformer(
         "all-MiniLM-L6-v2"
     )
