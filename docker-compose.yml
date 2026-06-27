@@ -53,7 +53,7 @@ services:
       - ./Frontend/.env.local
     environment:
       NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL}
-      NEXT_PUBLIC_API_URL: /api/backend
+      BACKEND_URL: http://backend:8000
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
       GOOGLE_PROJECT_ID: ${GOOGLE_PROJECT_ID}
       GOOGLE_AUTH_URI: ${GOOGLE_AUTH_URI}
