@@ -6,6 +6,9 @@ import uuid
 from errors import UserNotFoundError
 from typing import Optional
 from db.db_engine import session_local,Base
+
+from basemodel import User
+
 __all__ = [
     "add_user",
     "get_user",
@@ -31,6 +34,7 @@ class __Users(Base):
 
 
 async def add_user(username:str,full_name:str,email:str,hashed_password:str)->None:
+    
     async with session_local() as session:
         try:
             new_user=__Users(username=username,full_name=full_name,email=email,hashed_password=hashed_password)
@@ -40,7 +44,12 @@ async def add_user(username:str,full_name:str,email:str,hashed_password:str)->No
             await session.rollback()
             raise e
 
-async def update_user(old_username:str,new_username:Optional[str]=None,new_full_name:Optional[str]=None,new_email:Optional[str]=None,new_hashed_password:Optional[str]=None)->None:
+async def update_user(old_username:str,
+                      new_username:Optional[str]=None,
+                      new_full_name:Optional[str]=None,
+                      new_email:Optional[str]=None,
+                      new_hashed_password:Optional[str]=None)->None:
+    
     async with session_local() as session:
         try:
             result = await session.execute(select(__Users).where(__Users.username==old_username))
@@ -74,7 +83,7 @@ async def delete_user(username:str)->None:
             raise e
         
 
-async def get_user(username:str="",email:str="")->__Users|None:
+async def get_user(username:str="",email:str="")->User:
     async with session_local() as session:
         try:
             if username: 
@@ -89,7 +98,7 @@ async def get_user(username:str="",email:str="")->__Users|None:
                 if user is None:
                     raise UserNotFoundError()
                 return user          
-                
+            raise Exception("Provide at least username or email")
         except Exception as e:
             raise e
 

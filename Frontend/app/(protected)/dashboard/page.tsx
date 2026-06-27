@@ -139,7 +139,7 @@ export default function DashboardPage() {
           <button
             type="submit"
             disabled={isPending || !newProjectRequest.title.trim()}
-            className="bg-gray-900 dark:bg-gray-100 hover:bg-gray-800 dark:hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-white dark:text-gray-900 text-sm font-medium rounded-r-lg px-5 py-2.5 flex items-center justify-center min-w-[100px] transition-colors cursor-pointer"
+            className="bg-gray-900 dark:bg-gray-100 hover:bg-gray-800 dark:hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-white dark:text-gray-900 text-sm font-medium rounded-r-lg px-5 py-2.5 flex items-center justify-center min-w-25 transition-colors cursor-pointer"
           >
             {isPending ? (
               <span className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />

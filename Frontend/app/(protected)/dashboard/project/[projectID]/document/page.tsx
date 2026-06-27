@@ -1,6 +1,5 @@
 "use client"
 import Upload from "./Upload"
-import { useState } from "react"
 import { useParams } from "next/navigation"
 import api from "@/app/lib/api/api"
 import { isAxiosError } from "axios"

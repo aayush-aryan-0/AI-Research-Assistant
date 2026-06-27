@@ -28,7 +28,7 @@ export default function Upload() {
       const data = await res.json()
       setDocId(data.filename)
 
-    } catch (e) {
+    } catch {
       setError("Upload failed. Please try again.")
     } finally {
       router.refresh()
