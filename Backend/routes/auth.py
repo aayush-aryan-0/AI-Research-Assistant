@@ -124,7 +124,7 @@ async def send_mail(email:EmailSchema ):
     except Exception as e:
         logger.error(f"Unexpected error: {e}")
         raise HTTPException(status_code=500, detail="Unexpected error")
-2 trans
+
 
 @router.post("/verify_mail")
 async def verify_mail(verifyEmail: VerifyEmail, response: Response):
