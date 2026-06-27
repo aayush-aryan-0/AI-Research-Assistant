@@ -16,7 +16,7 @@ export default function DocumentPage() {
   async function deleteDocument(documentID: string) {
     try {
       setError("")
-      await api.delete(`/project/${projectID}/documents/`, {
+      await api.delete(`project/${projectID}/documents`, {
         data: { document_id: documentID },
       })
       setDocuments((prev) => prev.filter((d) => d.id !== documentID))

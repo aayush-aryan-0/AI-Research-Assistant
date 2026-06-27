@@ -31,7 +31,7 @@ export default function ProjectPage() {
   async function deleteChat(chatID: string) {
     try {
       setError("")
-      await api.delete(`/project/${projectID}/chat/`, {
+      await api.delete(`project/${projectID}/chat`, {
         data: {chat_id:chatID},
       })
       setChats((prev) => prev.filter((d) => d.id !== chatID))
@@ -46,7 +46,7 @@ export default function ProjectPage() {
     
     setTransition(async () => {
       try {
-        const result = await api.post(`/project/${projectID}/chat/new_chat`, newChatRequest)
+        const result = await api.post(`project/${projectID}/chat/new_chat`, newChatRequest)
         setChat(result.data)
         router.push(`/dashboard/project/${projectID}/chat/${result.data.id}`)
         

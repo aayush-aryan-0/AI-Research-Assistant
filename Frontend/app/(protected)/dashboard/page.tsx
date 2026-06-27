@@ -54,7 +54,7 @@ export default function DashboardPage() {
   async function deleteProject(projectID: string) {
     try {
       setError("")
-      await api.delete(`/project/`, {
+      await api.delete(`project`, {
         data: { project_id: projectID },
       })
       setProjects((prev) => prev.filter((d) => d.id !== projectID))
@@ -73,7 +73,7 @@ export default function DashboardPage() {
 
     setTransition(async () => {
       try {
-        const result = await api.post(`/project/new`, newProjectRequest)
+        const result = await api.post(`project/new`, newProjectRequest)
         setProject(result.data)
         router.push(`dashboard/project/${result.data.id}`)
       } catch (error: unknown) {

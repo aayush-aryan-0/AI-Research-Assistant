@@ -13,7 +13,7 @@ export type Stats = {
 export default function useStats() {
   const [stats, setStats] = useState<Stats>()
   useEffect(() => {
-    api.get(`/user/stats`).then(r => setStats(r.data)).catch(() => {})
+    api.get(`user/stats`).then(r => setStats(r.data)).catch(() => {})
   }, [])
   return stats
 }

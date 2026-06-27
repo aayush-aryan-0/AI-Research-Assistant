@@ -43,7 +43,7 @@ export default function ChatPage() {
   async function handleStream(newMessages: ChatMessage) {
     setTransition(async () => {
       const response = await fetch(
-        `http://localhost:8000/project/${projectID}/chat/${chatID}/message/prompt`,
+        `/api/backend/project/${projectID}/chat/${chatID}/message/prompt`,
         {
           method: "POST",
           credentials: "include",

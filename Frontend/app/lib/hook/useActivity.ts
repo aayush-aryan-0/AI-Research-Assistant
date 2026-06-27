@@ -12,7 +12,7 @@ export type ActivityItem = {
 export default function useActivity() {
   const [activity, setActivity] = useState<ActivityItem[]>([])
   useEffect(() => {
-    api.get(`/user/activity`).then(r => setActivity(r.data)).catch(() => {})
+    api.get(`user/activity`).then(r => setActivity(r.data)).catch(() => {})
   }, [])
   return activity
 }
