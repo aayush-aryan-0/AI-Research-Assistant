@@ -22,7 +22,7 @@ export default function useDocuments(projectID:ParamValue){
               }
               setDocuments(documents)
             } catch (e) {
-              if (isAxiosError(e)) console.log(e.cause)
+              if (isAxiosError(e)) console.log(e.cause,"\n",e,"\n",e.response?.data?.detail,"\n",e.response?.data,"\n",e.response)
               else console.error("Failed to load documents", e)
               setError("Failed to load documents")
             }
