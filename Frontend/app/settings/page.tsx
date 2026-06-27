@@ -39,6 +39,7 @@ export default function SettingsPage() {
                     <h2 className="text-xs font-bold uppercase tracking-widest text-red-500">
                         Danger Zone
                     </h2>
+                    <Logout/>
                     <div className="border border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-950/20 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div className="flex flex-col">
                             <span className="text-base font-medium text-gray-900 dark:text-gray-100">Delete Account</span>
@@ -50,7 +51,6 @@ export default function SettingsPage() {
                         >
                             Delete Account
                         </button>
-                        <Logout/>
                     </div>
                 </div>
 
