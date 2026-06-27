@@ -52,7 +52,7 @@ services:
     env_file:
       - ./Frontend/.env.local
     environment:
-      NEXT_PUBLIC_APP_URL: http://localhost:3000
+      NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL}
       NEXT_PUBLIC_API_URL: /api/backend
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
       GOOGLE_PROJECT_ID: ${GOOGLE_PROJECT_ID}
@@ -60,7 +60,7 @@ services:
       GOOGLE_TOKEN_URI: ${GOOGLE_TOKEN_URI}
       GOOGLE_AUTH_PROVIDER_X509_CERT_URL: ${GOOGLE_AUTH_PROVIDER_X509_CERT_URL}
       GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
-      NEXTAUTH_URL: http://localhost:3000/
+      NEXTAUTH_URL: ${NEXTAUTH_URL}
       NEXTAUTH_SECRET: ${NEXTAUTH_SECRET}
     depends_on:
       - backend
