@@ -15,7 +15,7 @@ export default function useDocuments(projectID:ParamValue){
         (async()=>{
 
             try {
-              const result = await api.get(`project/${projectID}/documents`)
+              const result = await api.get(`project/${projectID}/documents/get_all`)
               const documents:Array<Document> = result.data
               if (documents.length===0){
                 return
