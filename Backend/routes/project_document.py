@@ -6,7 +6,7 @@ from basemodel import User,ProjectDocumet
 from fastapi.responses import FileResponse
 import os
 import aiofiles
-from rag.document_processing import document_processing
+
 from pathlib import Path
 from log import logger
 import uuid
@@ -60,7 +60,7 @@ async def upload_file(
         async with aiofiles.open(path, "wb") as f:
             content = await file.read()
             await f.write(content)
-        
+        from rag.document_processing import document_processing
         chunk_metadata,chunks = await document_processing(pdf_path=path)
         
         document = await add_document(project_id=project_id,filename=file.filename,file_path=path)
