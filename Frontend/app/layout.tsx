@@ -6,6 +6,7 @@ import Providers from "./Provider";
 import ProjectProvider from "./(protected)/lib/provider/ProjectProvider";
 import ChatProvider from "./(protected)/lib/provider/ChatProvider";
 import ErrorProvider from "./(protected)/lib/provider/ErrorProvider";
+import { useEffect } from "react";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,6 +27,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  useEffect(() => {
+  const ping = () => fetch('/api/backend/')
+  ping()
+  const interval = setInterval(ping, 10 * 60 * 1000) // every 10 mins
+  return () => clearInterval(interval)
+}, [])
   return (
     
     <html
