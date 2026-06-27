@@ -1,5 +1,6 @@
 from sqlalchemy.ext.asyncio import create_async_engine,async_sessionmaker
 from sqlalchemy.orm import declarative_base
+from sqlalchemy import text
 from dotenv import load_dotenv
 import os
 
@@ -25,4 +26,5 @@ Base=declarative_base()
 
 async def init_models():
     async with __engine.begin() as conn:
+        await conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
         await conn.run_sync(Base.metadata.create_all)

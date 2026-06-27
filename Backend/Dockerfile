@@ -34,6 +34,7 @@ RUN adduser \
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
 # Leverage a bind mount to requirements.txt to avoid having to copy them into
 # into this layer.
+RUN pip install --upgrade pip
 RUN --mount=type=cache,target=/root/.cache/pip \
     --mount=type=bind,source=requirements.txt,target=requirements.txt \
     python -m pip install -r requirements.txt
@@ -46,6 +47,9 @@ COPY . .
 
 # Expose the port that the application listens on.
 EXPOSE 8000
+USER root
+RUN rm -rf venv .venv env
+RUN touch app.log && chmod 666 app.log
 
 # Run the application.
-CMD uvicorn 'venv.Lib.site-packages.httpx._transports.asgi:application' --host=0.0.0.0 --port=8000
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

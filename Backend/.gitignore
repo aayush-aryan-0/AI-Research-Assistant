@@ -12,3 +12,4 @@ test.*
 *.py[cod]
 files/
 Test/
+venv/
