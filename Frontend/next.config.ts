@@ -6,7 +6,8 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/backend/:path*",
-        destination: "https://ai-research-assistant-backend-fnc7.onrender.com/:path*"
+        destination: `${process.env.BACKEND_URL}/:path*`
+
       }
     ]
   }
