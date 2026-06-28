@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-RUN rm -rf venv .venv env
+RUN rm -rf venv .venv env _pycache_
 RUN touch app.log && chmod 666 app.log
 
 EXPOSE 8000
