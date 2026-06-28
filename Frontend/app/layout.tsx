@@ -6,7 +6,7 @@ import Providers from "./Provider";
 import ProjectProvider from "./(protected)/lib/provider/ProjectProvider";
 import ChatProvider from "./(protected)/lib/provider/ChatProvider";
 import ErrorProvider from "./(protected)/lib/provider/ErrorProvider";
-import KeepAlive from "./keepAlive";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -40,7 +40,7 @@ export default function RootLayout({
               <ProjectProvider>
                 <ChatProvider>
                   <ErrorProvider>
-                    <KeepAlive/>
+                   
                     {children}
                   </ErrorProvider>
                 </ChatProvider>
