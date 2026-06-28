@@ -15,7 +15,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 COPY . .
 
-RUN rm -rf venv .venv env
+RUN rm -rf venv .venv env __pycache__
 RUN touch app.log && chmod 666 app.log
 
 EXPOSE 8000
