@@ -14,6 +14,9 @@ print("3. user_auth imported", flush=True)
 from routes import auth, user, summaries, chat, project, chat_message, project_document, welcome
 print("4. routes imported", flush=True)
 
+import db
+print("# initalized db")
+
 import uvicorn
 
 @asynccontextmanager
