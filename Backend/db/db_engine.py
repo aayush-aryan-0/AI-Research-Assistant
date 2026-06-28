@@ -7,7 +7,8 @@ import os
 
 __all__=["init_models","session_local","Base"]
 
-load_dotenv()
+if not os.getenv("RAILWAY_ENVIRONMENT"):
+    load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_DEV_URL")
 
