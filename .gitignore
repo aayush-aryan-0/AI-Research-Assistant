@@ -4,3 +4,4 @@ google_secerts.json
 .env.development
 .env.production
 docker-compose.override.yml
+.vscode/
