@@ -13,3 +13,4 @@ test.*
 files/
 Test/
 venv/
+test.*
